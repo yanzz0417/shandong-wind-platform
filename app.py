@@ -82,7 +82,7 @@ st.markdown(
     [data-testid="stToolbar"], [data-testid="stStatusWidget"], [data-testid="stDecoration"], #MainMenu, footer { display:none !important; visibility:hidden !important; }
     .stAppViewContainer { padding-top:0 !important; }
     [data-testid="stAppViewBlockContainer"] { padding-top:1rem !important; }
-    [data-testid="stSidebar"] { __SIDEBAR_BACKGROUND__ background-color:rgba(3,16,38,.84) !important; background-blend-mode:multiply; border-right:1px solid rgba(190,176,100,.28); box-shadow:8px 0 28px rgba(0,18,27,.18); backdrop-filter:blur(8px); }
+    [data-testid="stSidebar"] { __SIDEBAR_BACKGROUND__ background-color:rgba(3,16,38,.78) !important; background-blend-mode:multiply; border-right:1px solid rgba(190,176,100,.28); box-shadow:8px 0 28px rgba(0,18,27,.18); backdrop-filter:blur(8px); }
     [data-testid="stSidebar"] > div,
     [data-testid="stSidebar"] [data-testid="stSidebarContent"],
     [data-testid="stSidebar"] [data-testid="stSidebarUserContent"] { background:transparent !important; background-color:transparent !important; }
