@@ -90,6 +90,7 @@ st.markdown(
     [data-testid="stSidebar"] input[type="radio"] { accent-color:#dfb568; }
     [data-testid="stSidebar"] * { font-family:'Manrope', sans-serif; }
     [data-testid="stSidebar"] .stMarkdown, [data-testid="stSidebar"] label { color:#eef4fa !important; }
+    [data-testid="collapsedControl"] { display:none !important; }
     [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h2 { color:#f4f1e8 !important; font-family:'Noto Serif SC',serif; font-size:1.18rem; letter-spacing:.02em; margin:.55rem 0 .15rem; }
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color:#a9bfd4 !important; font-size:.72rem; line-height:1.6; }
     [data-testid="stSidebar"] [data-testid="stRadio"] > label { color:#a9c4dc !important; font:600 .85rem 'Noto Serif SC',serif; letter-spacing:.06em; margin:.8rem 0 .45rem; }
