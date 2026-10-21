@@ -98,7 +98,7 @@ st.markdown(
     [data-testid="stSidebar"] .stRadio label { min-height:44px; box-sizing:border-box; padding:.66rem .78rem; border:1px solid transparent; border-left:3px solid transparent; border-radius:4px; background:rgba(3,16,38,.22); }
     [data-testid="stSidebar"] .stRadio label:hover { background:rgba(196,156,53,.16); border-color:rgba(217,176,97,.22); border-left-color:#d9b061; }
     [data-testid="stSidebar"] .stRadio label p { color:#e4eef6 !important; font-size:1.04rem; font-weight:600; }
-    [data-testid="stSidebar"] .stRadio label:has(input:checked) { background:linear-gradient(90deg,rgba(201,162,39,.34),rgba(201,162,39,.12)); border-color:rgba(217,176,97,.3); border-left-color:#e3c079; box-shadow:inset 0 0 18px rgba(208,170,80,.08); }
+    [data-testid="stSidebar"] .stRadio label:has(input:checked) { background:rgba(201,162,39,.20); border-color:rgba(217,176,97,.35); border-left-color:#e3c079; }
     [data-testid="stSidebar"] .stRadio label:has(input:checked) p { color:#ffffff !important; font-weight:800; }
     [data-testid="stSidebar"] [data-testid="stExpander"] { background:rgba(4,20,42,.58); border:1px solid rgba(196,168,92,.28); }
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color:#a9c9c8 !important; }
