@@ -276,17 +276,6 @@ st.markdown(
 with st.sidebar:
     st.markdown(
         '<div class="hero-title">'
-        '<span class="ht-icon">'
-        '<svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">'
-        '  <path d="M32 40 L32 20" stroke="#2f8fd6" stroke-width="3.5" stroke-linecap="round" fill="none"/>'
-        '  <path d="M32 24 C23 22 17 16 14 9" stroke="#2f8fd6" stroke-width="3" stroke-linecap="round" fill="none"/>'
-        '  <path d="M32 24 C41 22 47 16 50 9" stroke="#2f8fd6" stroke-width="3" stroke-linecap="round" fill="none"/>'
-        '  <path d="M32 24 V9" stroke="#2f8fd6" stroke-width="3" stroke-linecap="round" fill="none"/>'
-        '  <circle cx="32" cy="25" r="4.2" fill="#2f8fd6"/>'
-        '  <path d="M8 50 Q14 44 20 50 T32 50 T44 50 T56 50" stroke="#2f8fd6" stroke-width="2.6" fill="none" stroke-linecap="round"/>'
-        '  <path d="M11 42 l1.2 -2.6 1.2 2.6" fill="#e8c868"/>'
-        '  <path d="M51 40 l1.2 -2.6 1.2 2.6" fill="#e8c868"/>'
-        '</svg></span>'
         '<span class="ht-text">山东海上风电交互平台</span>'
         '<span class="ht-icon">'
         '<svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">'
