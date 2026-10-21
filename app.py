@@ -107,11 +107,11 @@ st.markdown(
     h1,h2,h3,h4 { color:#eef4fa; }
     .mono { font:500 .68rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
     .eyebrow { color:var(--cyan); margin-bottom:.8rem; }
-    .topbar { position:relative; overflow:hidden; display:flex; justify-content:space-between; align-items:center; background:#0a1e38; color:#eef4fa; padding:.7rem 1rem; margin:-.3rem 0 1.4rem; min-height:66px; }
-    .topbrand { position:relative; z-index:1; display:flex; align-items:center; gap:.7rem; }
-    .brand-mark { width:38px; height:38px; display:grid; place-items:center; }
-    .topbrand strong { display:block; font-size:1.2rem; letter-spacing:.05em; line-height:1.25; font-family:'Noto Serif SC',serif; font-weight:800; }
-    .topbrand span { display:block; color:#8ba6bf; font-size:.68rem; margin-top:.15rem; }
+    .topbar { position:relative; overflow:hidden; display:flex; justify-content:center; align-items:center; background:transparent; color:#ffffff; padding:.7rem 1rem; margin:-.3rem 0 1.4rem; min-height:70px; }
+    .topbrand { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:.7rem; }
+    .brand-mark { width:44px; height:44px; display:grid; place-items:center; }
+    .topbrand strong { display:block; font-size:1.6rem; letter-spacing:.06em; line-height:1.3; font-family:'Noto Serif SC',serif; font-weight:800; text-align:center; text-shadow:0 2px 8px rgba(0,18,36,.85),0 1px 3px rgba(0,0,0,.6); }
+    .topbrand span { display:block; color:#d6e6f4; font-size:.8rem; margin-top:.22rem; text-align:center; letter-spacing:.12em; text-shadow:0 1px 4px rgba(0,18,36,.7); }
     .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
     .tb-dyn { position:absolute; pointer-events:none; z-index:0; }
     .tb-gull { top:7px; left:33%; animation:tb-gull 6s ease-in-out infinite; }
