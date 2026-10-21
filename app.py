@@ -114,8 +114,9 @@ st.markdown(
     .topbrand span { display:block; color:#d6e6f4; font-size:.8rem; margin-top:.22rem; text-align:center; letter-spacing:.12em; text-shadow:0 1px 4px rgba(0,18,36,.7); }
     .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
     .tb-dyn { position:absolute; pointer-events:none; z-index:0; }
+    .tb-net { bottom:1px; left:54%; }
     .tb-gull { top:26px; left:52%; animation:tb-gull 7s ease-in-out infinite; }
-    .tb-gull .gull-wing { transform-origin:24px 11px; animation:gull-flap .9s ease-in-out infinite; }
+    .tb-gull .gull-wing { transform-origin:23px 14px; animation:gull-flap .9s ease-in-out infinite; }
     @keyframes tb-gull { 0%{transform:translate(0,0);} 25%{transform:translate(46px,-30px);} 50%{transform:translate(72px,0);} 75%{transform:translate(46px,30px);} 100%{transform:translate(0,0);} }
     @keyframes gull-flap { 0%,100%{transform:rotate(-9deg);} 50%{transform:rotate(9deg);} }
     .tb-wm { bottom:3px; left:43%; }
@@ -343,10 +344,11 @@ st.markdown(('<div class="topbar">'
     '<div class="topbrand">'
     '<div class="brand-mark"><svg viewBox="0 0 60 60" width="46" height="46" aria-hidden="true"><rect x="27" y="26" width="6" height="32" rx="1.5" fill="#eaf6fe" stroke="#c2d9eb" stroke-width="0.8"/><circle cx="30" cy="24" r="3" fill="#e0c079"/><g><path d="M28 24 C26 16 27 6 30 1 C33 6 34 16 32 24 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6"/><path d="M28 24 C26 16 27 6 30 1 C33 6 34 16 32 24 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6" transform="rotate(120 30 24)"/><path d="M28 24 C26 16 27 6 30 1 C33 6 34 16 32 24 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6" transform="rotate(240 30 24)"/><animateTransform attributeName="transform" type="rotate" from="0 30 24" to="360 30 24" dur="5s" repeatCount="indefinite"/></g><path d="M4 57 Q11 51 18 57 T30 57 T42 57 T54 57" stroke="#8fd0f0" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div>'
     '<div>'
-    '<strong>海风变绿电——山东海上风电时空减碳可视化<svg class="tb-net" viewBox="0 0 32 32" width="30" height="30" style="margin:0 5px;vertical-align:-4px;"><g><circle cx="16" cy="16" r="10" fill="none" stroke="rgba(120,220,160,.92)" stroke-width="2"/><ellipse cx="16" cy="16" rx="10" ry="4.4" fill="none" stroke="rgba(120,220,160,.78)" stroke-width="1.6"/><line x1="16" y1="6" x2="16" y2="26" stroke="rgba(120,220,160,.78)" stroke-width="1.6"/><circle cx="16" cy="16" r="1.6" fill="#6ee79a"/><animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="12s" repeatCount="indefinite"/></g></svg>平台</strong>'
+    '<strong>海风变绿电——山东海上风电时空减碳可视化平台</strong>'
     '</div>'
     '</div>'
-    '<svg class="tb-dyn tb-gull" viewBox="0 0 46 22" width="42" height="20" fill="none"><g class="gull-wing" stroke="rgba(255,255,255,.98)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15 Q12 6 22 10 Q14 12 8 13 Z"/><path d="M43 15 Q34 6 24 10 Q32 12 38 13 Z"/><path d="M22 10 L22 17"/><path d="M22 10 Q28 7 31 8"/></g></svg>'
+    '<svg class="tb-dyn tb-gull" viewBox="0 0 46 24" width="42" height="22" fill="none"><g class="gull-wing"><ellipse cx="23" cy="14" rx="6" ry="3.6" fill="rgba(255,255,255,.98)"/><path d="M18 13 Q6 6 2 10 L6 12.5 Q13 15 18 14 Z" fill="#ffffff"/><path d="M2 10 Q4 7.5 8.5 9 L6 12.5 Q3 11.5 2 10 Z" fill="#2b2b2b"/><path d="M28 13 Q40 6 44 10 L40 12.5 Q33 15 28 14 Z" fill="#ffffff"/><path d="M44 10 Q42 7.5 37.5 9 L40 12.5 Q43 11.5 44 10 Z" fill="#2b2b2b"/><path d="M20 16 L19 20 L23 17.5 L27 20 L26 16 Z" fill="rgba(255,255,255,.97)"/><path d="M21 11 L16 10 L21 13 Z" fill="#f4b942"/><circle cx="24" cy="10.6" r=".8" fill="#1d1d1d"/></g></svg>'
+    '<svg class="tb-dyn tb-net" viewBox="0 0 32 32" width="30" height="30"><g><circle cx="16" cy="16" r="10" fill="none" stroke="rgba(120,220,160,.92)" stroke-width="2"/><ellipse cx="16" cy="16" rx="10" ry="4.4" fill="none" stroke="rgba(120,220,160,.78)" stroke-width="1.6"/><line x1="16" y1="6" x2="16" y2="26" stroke="rgba(120,220,160,.78)" stroke-width="1.6"/><circle cx="16" cy="16" r="1.6" fill="#6ee79a"/><animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="12s" repeatCount="indefinite"/></g></svg>'
     '<svg class="tb-dyn tb-sea" viewBox="0 0 300 8" width="100%" height="8" preserveAspectRatio="none" fill="none"><path class="wave-a" d="M0 5 Q25 2 50 5 T100 5 T150 5 T200 5 T250 5 T300 5" stroke="rgba(120,200,238,.5)" stroke-width="1.4"/><path class="wave-b" d="M0 7 Q30 4 60 7 T120 7 T180 7 T240 7 T300 7" stroke="rgba(120,200,238,.25)" stroke-width="1.2"/></svg>'
     '</div>'), unsafe_allow_html=True)
 top_spacer, top_refresh = st.columns([5.2, 1], gap="small")
