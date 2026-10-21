@@ -92,11 +92,11 @@ st.markdown(
     [data-testid="stSidebar"] .stMarkdown, [data-testid="stSidebar"] label { color:#eef4fa !important; }
     [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h2 { color:#f4f1e8 !important; font-family:'Noto Serif SC',serif; font-size:1.18rem; letter-spacing:.02em; margin:.55rem 0 .15rem; }
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color:#a9bfd4 !important; font-size:.72rem; line-height:1.6; }
-    [data-testid="stSidebar"] [data-testid="stRadio"] > label { color:#8ba6bf !important; font:500 .67rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; margin:.8rem 0 .45rem; }
+    [data-testid="stSidebar"] [data-testid="stRadio"] > label { color:#a9c4dc !important; font:600 .85rem 'Noto Serif SC',serif; letter-spacing:.06em; margin:.8rem 0 .45rem; }
     [data-testid="stSidebar"] .stRadio > div { gap:.42rem; }
-    [data-testid="stSidebar"] .stRadio label { min-height:42px; box-sizing:border-box; padding:.65rem .72rem; border:1px solid transparent; border-left:3px solid transparent; border-radius:4px; background:rgba(3,16,38,.22); transition:background .18s ease,border-color .18s ease,transform .18s ease; }
-    [data-testid="stSidebar"] .stRadio label:hover { background:rgba(196,156,53,.16); border-color:rgba(217,176,97,.22); border-left-color:#d9b061; transform:translateX(2px); }
-    [data-testid="stSidebar"] .stRadio label p { color:#d6e4ef !important; font-size:.86rem; font-weight:600; }
+    [data-testid="stSidebar"] .stRadio label { min-height:44px; box-sizing:border-box; padding:.66rem .78rem; border:1px solid transparent; border-left:3px solid transparent; border-radius:4px; background:rgba(3,16,38,.22); }
+    [data-testid="stSidebar"] .stRadio label:hover { background:rgba(196,156,53,.16); border-color:rgba(217,176,97,.22); border-left-color:#d9b061; }
+    [data-testid="stSidebar"] .stRadio label p { color:#e4eef6 !important; font-size:1.04rem; font-weight:600; }
     [data-testid="stSidebar"] .stRadio label:has(input:checked) { background:linear-gradient(90deg,rgba(201,162,39,.34),rgba(201,162,39,.12)); border-color:rgba(217,176,97,.3); border-left-color:#e3c079; box-shadow:inset 0 0 18px rgba(208,170,80,.08); }
     [data-testid="stSidebar"] .stRadio label:has(input:checked) p { color:#ffffff !important; font-weight:800; }
     [data-testid="stSidebar"] [data-testid="stExpander"] { background:rgba(4,20,42,.58); border:1px solid rgba(196,168,92,.28); }
