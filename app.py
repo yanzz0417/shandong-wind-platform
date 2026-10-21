@@ -114,11 +114,11 @@ st.markdown(
     .topbrand span { display:block; color:#d6e6f4; font-size:.8rem; margin-top:.22rem; text-align:center; letter-spacing:.12em; text-shadow:0 1px 4px rgba(0,18,36,.7); }
     .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
     .tb-dyn { position:absolute; pointer-events:none; z-index:0; }
-    .tb-gull { top:6px; left:28%; animation:tb-gull 9s ease-in-out infinite; }
-    .tb-gull .gull-wing { transform-origin:24px 12px; animation:gull-flap .85s ease-in-out infinite; }
-    @keyframes tb-gull { 0%{transform:translate(0,0);} 25%{transform:translate(95px,-16px);} 50%{transform:translate(190px,0);} 75%{transform:translate(95px,-11px);} 100%{transform:translate(0,0);} }
-    @keyframes gull-flap { 0%,100%{transform:rotate(-8deg);} 50%{transform:rotate(8deg);} }
-    .tb-net { top:5px; right:27%; }
+    .tb-gull { top:26px; left:52%; animation:tb-gull 7s ease-in-out infinite; }
+    .tb-gull .gull-wing { transform-origin:24px 11px; animation:gull-flap .9s ease-in-out infinite; }
+    @keyframes tb-gull { 0%{transform:translate(0,0);} 25%{transform:translate(46px,-30px);} 50%{transform:translate(72px,0);} 75%{transform:translate(46px,30px);} 100%{transform:translate(0,0);} }
+    @keyframes gull-flap { 0%,100%{transform:rotate(-9deg);} 50%{transform:rotate(9deg);} }
+    .tb-net { bottom:4px; left:47%; }
     .tb-wm { bottom:3px; left:43%; }
     .tb-sea { bottom:0; left:0; width:100%; }
     .tb-sea .wave-a { animation:tb-wave 7s ease-in-out infinite; }
@@ -347,7 +347,7 @@ st.markdown(('<div class="topbar">'
     '<strong>海风变绿电——山东海上风电时空减碳可视化平台</strong>'
     '</div>'
     '</div>'
-    '<svg class="tb-dyn tb-gull" viewBox="0 0 46 20" width="42" height="18" fill="none"><g class="gull-wing"><path d="M23 11 Q14 4 5 5 Q8 10 23 12 Z" fill="rgba(255,255,255,.97)"/><path d="M23 12 Q14 18 5 16 Q8 12 23 11 Z" fill="rgba(255,255,255,.9)"/><ellipse cx="24" cy="11.5" rx="4" ry="2" fill="rgba(255,255,255,.99)"/><path d="M27 10 L31 12 L27 13 Z" fill="rgba(255,255,255,.9)"/><path d="M20.5 10.5 L17 10.2 L20.5 11.8 Z" fill="#e6a23c"/><circle cx="22" cy="10" r=".7" fill="#222"/></g></svg>'
+    '<svg class="tb-dyn tb-gull" viewBox="0 0 46 22" width="42" height="20" fill="none"><g class="gull-wing" stroke="rgba(255,255,255,.98)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15 Q12 6 22 10 Q14 12 8 13 Z"/><path d="M43 15 Q34 6 24 10 Q32 12 38 13 Z"/><path d="M22 10 L22 17"/><path d="M22 10 Q28 7 31 8"/></g></svg>'
     '<svg class="tb-dyn tb-net" viewBox="0 0 32 32" width="20" height="20"><g><circle cx="16" cy="16" r="10" fill="none" stroke="rgba(95,180,240,.85)" stroke-width="2"/><ellipse cx="16" cy="16" rx="10" ry="4.4" fill="none" stroke="rgba(95,180,240,.7)" stroke-width="1.6"/><line x1="16" y1="6" x2="16" y2="26" stroke="rgba(95,180,240,.7)" stroke-width="1.6"/><circle cx="16" cy="16" r="1.6" fill="#5bb4f0"/><animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="12s" repeatCount="indefinite"/></g></svg>'
     '<svg class="tb-dyn tb-sea" viewBox="0 0 300 8" width="100%" height="8" preserveAspectRatio="none" fill="none"><path class="wave-a" d="M0 5 Q25 2 50 5 T100 5 T150 5 T200 5 T250 5 T300 5" stroke="rgba(120,200,238,.5)" stroke-width="1.4"/><path class="wave-b" d="M0 7 Q30 4 60 7 T120 7 T180 7 T240 7 T300 7" stroke="rgba(120,200,238,.25)" stroke-width="1.2"/></svg>'
     '</div>'), unsafe_allow_html=True)
