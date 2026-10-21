@@ -247,6 +247,11 @@ st.markdown(
     [data-testid="stMetric"] { background:rgba(5,20,40,.92); border:1px solid rgba(196,168,92,.4); border-top:3px solid #c9a227; border-radius:10px; padding:.85rem 1rem; }
     [data-testid="stMetricLabel"] { color:#ffffff !important; font-size:.8rem; letter-spacing:.03em; }
     [data-testid="stMetricValue"] { color:#ffffff !important; font-weight:800; font-size:1.55rem !important; }
+    .stSlider { width:100% !important; }
+    .stSlider [data-baseweb="slider"] { width:100% !important; }
+    [data-testid="stSelectbox"] > div { width:100% !important; }
+    [data-testid="stSlider"] [role="slider"] { cursor:pointer; }
+    .param-note { color:#a9c4dc; font-size:.74rem; line-height:1.55; margin-top:5px; padding-left:2px; }
     .stSlider [data-baseweb="slider"] { background:rgba(5,20,40,.6); }
 
     /* 深底高亮：所有控件文字统一提亮，保证黑底上也看得清 */
@@ -681,9 +686,11 @@ def carbon():
     p1, p2 = st.columns(2, gap="large")
     with p1:
         hours = st.slider("年等效利用小时数 / h", 1000, 8760, 3000, 100, key="carbon_hours")
+        st.markdown('<div class="param-note">依据：海上风电年等效利用小时常取 3,000 h 作为测算基准，可按项目实际运行情况调整。</div>', unsafe_allow_html=True)
     with p2:
         factor_map = {0.5306: "全国平均 · 2023年", 0.6191: "山东省 · 2023年", 0.6361: "华北区域 · 2023年"}
         factor = st.selectbox("替代电力排放因子 / kgCO₂·kWh⁻¹", list(factor_map.keys()), format_func=lambda x: f"{x} · {factor_map[x]}", key="carbon_factor")
+        st.markdown('<div class="param-note">依据：电力排放因子取 2023 年公开电网排放因子（全国 0.5306 / 山东 0.6191 / 华北 0.6361 kgCO₂·kWh⁻¹），用于替代火电的减排测算。</div>', unsafe_allow_html=True)
 
     # 03 计算公式与测算口径
     step("03", "计算公式与测算口径")
