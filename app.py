@@ -236,12 +236,11 @@ st.markdown(
     .hero-title .ht-icon svg { display:block; }
     .hero-title .ht-text {
       font-family:'Noto Serif SC',serif; font-size:17px; font-weight:800; letter-spacing:1px; line-height:1.25;
-      background:linear-gradient(180deg,#5fb4ea 0%,#3a95d6 45%,#1a6fb8 100%);
-      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:#1a6fb8;
-      filter:drop-shadow(0 1px 0 #cfe6f8) drop-shadow(0 2px 3px rgba(10,40,70,.35));
+      color:#ffffff !important; -webkit-text-fill-color:#ffffff;
+      text-shadow:0 0 6px rgba(90,179,240,.55), 0 0 14px rgba(90,179,240,.32), 0 1px 2px rgba(10,40,70,.4);
       white-space:nowrap;
     }
-    .hero-sub { color:#bcd7e6; font-size:12px; letter-spacing:2px; margin:0 0 2px 2px; }
+    .hero-sub { color:#ffffff; font-size:12px; letter-spacing:2px; margin:0 0 2px 2px; text-shadow:0 0 5px rgba(90,179,240,.45); }
 
     
     [data-testid="stMetric"] { background:rgba(5,20,40,.92); border:1px solid rgba(196,168,92,.4); border-top:3px solid #c9a227; border-radius:10px; padding:.85rem 1rem; }
@@ -276,6 +275,7 @@ st.markdown(
 with st.sidebar:
     st.markdown(
         '<div class="hero-title">'
+        '<span class="ht-icon"><svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true"><circle cx="32" cy="32" r="19" fill="rgba(90,179,240,.15)" stroke="#5ab3f0" stroke-width="3"/><path d="M32 24 C24 21 19 15 16 8" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M32 24 C40 21 45 15 48 8" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M32 26 V8" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/><circle cx="32" cy="25" r="3.2" fill="#ffffff"/></svg></span>'
         '<span class="ht-text">山东海上风电交互平台</span>'
         '<span class="ht-icon">'
         '<svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">'
