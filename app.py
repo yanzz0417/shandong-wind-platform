@@ -97,9 +97,9 @@ st.markdown(
     [data-testid="stSidebar"] [data-testid="stRadio"] > label { color:#a9c4dc !important; font:600 .85rem 'Noto Serif SC',serif; letter-spacing:.06em; margin:.8rem 0 .45rem; }
     [data-testid="stSidebar"] .stRadio > div { gap:.42rem; }
     [data-testid="stSidebar"] .stRadio label { min-height:44px; box-sizing:border-box; padding:.66rem .78rem; border:1px solid transparent; border-left:3px solid transparent; border-radius:4px; background:rgba(3,16,38,.22); }
-    [data-testid="stSidebar"] .stRadio label:hover { background:rgba(56,122,199,.16); border-color:rgba(97,156,241,.25); border-left-color:#619cf1; }
+    [data-testid="stSidebar"] .stRadio label:hover { background:transparent; border-color:transparent; border-left-color:transparent; }
     [data-testid="stSidebar"] .stRadio label p { color:#e4eef6 !important; font-size:1.04rem; font-weight:600; }
-    [data-testid="stSidebar"] .stRadio label:has(input:checked) { background:rgba(56,122,199,.24); border-color:rgba(97,156,241,.4); border-left-color:#619cf1; }
+    [data-testid="stSidebar"] .stRadio label:has(input:checked) { background:rgba(201,162,39,.20); border-color:rgba(217,176,97,.35); border-left-color:#e3c079; }
     [data-testid="stSidebar"] .stRadio label:has(input:checked) p { color:#ffffff !important; font-weight:800; }
     [data-testid="stSidebar"] [data-testid="stExpander"] { background:rgba(4,20,42,.58); border:1px solid rgba(196,168,92,.28); }
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color:#a9c9c8 !important; }
