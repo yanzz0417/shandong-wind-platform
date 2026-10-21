@@ -253,7 +253,7 @@ st.markdown(
     [data-testid="stSelectbox"] [data-baseweb="select"] > div { color:#5ab3f0 !important; font-weight:600; }
 
     [data-testid="stSlider"] [role="slider"] { cursor:pointer; }
-    .param-note { color:#5ab3f0; font-size:.74rem; line-height:1.55; margin-top:5px; padding-left:2px; }
+    .param-note { color:#a9c4dc; font-size:.74rem; line-height:1.55; margin-top:5px; padding-left:2px; }
     .stSlider [data-baseweb="slider"] { background:rgba(5,20,40,.6); }
 
     /* 深底高亮：所有控件文字统一提亮，保证黑底上也看得清 */
