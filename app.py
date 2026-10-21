@@ -231,6 +231,13 @@ st.markdown(
 
 
     /* ===== 大标题 Logo：蓝色立体文字 + 风机/地球图标 + 金色星点 ===== */
+    .hero-scene { margin:2px 0 12px; border-radius:10px; overflow:hidden; box-shadow:0 3px 14px rgba(0,18,27,.4); }
+    .hero-scene .spin-blades { animation:hs-spin 5.5s linear infinite; }
+    @keyframes hs-spin { to { transform: rotate(360deg); } }
+    .hero-scene .wave-a { animation:hs-wave 6s ease-in-out infinite; }
+    .hero-scene .wave-b { animation:hs-wave 8s ease-in-out infinite reverse; }
+    .hero-scene .wave-c { animation:hs-wave 10s ease-in-out infinite; }
+    @keyframes hs-wave { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-18px);} }
     .hero-title { display:flex; align-items:center; gap:7px; margin:8px 0 2px; }
     .hero-title .ht-icon { flex:0 0 auto; line-height:0; }
     .hero-title .ht-icon svg { display:block; }
@@ -274,8 +281,24 @@ st.markdown(
 
 with st.sidebar:
     st.markdown(
+        '<div class="hero-scene">'
+        '<svg viewBox="0 0 260 112" width="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="display:block;">'
+        '<defs><linearGradient id="hsSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123a5e"/><stop offset="1" stop-color="#1a5a86"/></linearGradient></defs>'
+        '<rect x="0" y="0" width="260" height="112" fill="url(#hsSky)" rx="10"/>'
+        '<g fill="rgba(255,255,255,.35)"><ellipse cx="42" cy="22" rx="17" ry="6"/><ellipse cx="216" cy="28" rx="21" ry="7"/></g>'
+        '<path d="M130 44 L130 78" stroke="#eaf4fb" stroke-width="3.2" stroke-linecap="round"/>'
+        '<path d="M130 78 L130 88" stroke="#eaf4fb" stroke-width="5.5" stroke-linecap="round"/>'
+        '<g class="spin-blades" style="transform-origin:130px 44px;">'
+        '<path d="M130 44 L130 15" stroke="#f4fbff" stroke-width="3.4" stroke-linecap="round"/>'
+        '<path d="M130 44 L153 31" stroke="#f4fbff" stroke-width="3.4" stroke-linecap="round"/>'
+        '<path d="M130 44 L107 31" stroke="#f4fbff" stroke-width="3.4" stroke-linecap="round"/>'
+        '<circle cx="130" cy="44" r="4.4" fill="#dff1fb" stroke="#8fd0f0" stroke-width="1"/></g>'
+        '<g class="wave-a"><path d="M0 80 Q 16 72 32 80 T64 80 T96 80 T128 80 T160 80 T192 80 T224 80 T256 80 L256 112 L0 112 Z" fill="rgba(90,179,240,.20)"/></g>'
+        '<g class="wave-b"><path d="M0 88 Q 16 80 32 88 T64 88 T96 88 T128 88 T160 88 T192 88 T224 88 T256 88 L256 112 L0 112 Z" fill="rgba(26,111,184,.42)"/></g>'
+        '<g class="wave-c"><path d="M0 97 Q 16 91 32 97 T64 97 T96 97 T128 97 T160 97 T192 97 T224 97 T256 97 L256 112 L0 112 Z" fill="rgba(8,52,100,.5)"/></g>'
+        '</svg>'
+        '</div>'
         '<div class="hero-title">'
-        '<span class="ht-icon"><svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true"><circle cx="32" cy="32" r="19" fill="rgba(90,179,240,.15)" stroke="#5ab3f0" stroke-width="3"/><path d="M32 24 C24 21 19 15 16 8" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M32 24 C40 21 45 15 48 8" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M32 26 V8" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/><circle cx="32" cy="25" r="3.2" fill="#ffffff"/></svg></span>'
         '<span class="ht-text">山东海上风电交互平台</span>'
         '<span class="ht-icon">'
         '<svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">'
