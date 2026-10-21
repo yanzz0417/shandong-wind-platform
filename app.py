@@ -863,9 +863,9 @@ def overview_summary():
                       yaxis=dict(title=dict(text="累计并网 / 万千瓦", font=dict(color="#ffffff", size=14, family="Microsoft YaHei")), tickfont=dict(color="#ffffff", size=13, family="Microsoft YaHei"), range=[0, 730], gridcolor="rgba(196,168,92,.18)", zeroline=False))
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "staticPlot": True})
     st.markdown(f'<div class="ov-grid">'
-                f'<div class="ov-item"><div class="lbl">最新累计并网（2025）</div><div class="val">{latest_cap:,.1f} <em>万千瓦</em></div><div class="note">累计并网口径，官方公开</div></div>'
                 f'<div class="ov-item"><div class="lbl">起步年份（2021）</div><div class="val">60.0 <em>万千瓦</em></div><div class="note">首批并网、实现零突破</div></div>'
                 f'<div class="ov-item"><div class="lbl">覆盖区间</div><div class="val">2021—2025 <em>5 年</em></div><div class="note">累计并网约为 2021 年的 {ratio:.1f} 倍</div></div>'
+                f'<div class="ov-item"><div class="lbl">最新累计并网（2025）</div><div class="val">{latest_cap:,.1f} <em>万千瓦</em></div><div class="note">累计并网口径，官方公开</div></div>'
                 f'</div></div>', unsafe_allow_html=True)
 
     # ---- 02 空间分布 · 山东沿海项目（最终结果）----
