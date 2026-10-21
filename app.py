@@ -114,7 +114,7 @@ st.markdown(
     .topbrand span { display:block; color:#d6e6f4; font-size:.8rem; margin-top:.22rem; text-align:center; letter-spacing:.12em; text-shadow:0 1px 4px rgba(0,18,36,.7); }
     .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
     .tb-dyn { position:absolute; pointer-events:none; z-index:0; }
-    .tb-net { bottom:1px; left:54%; }
+    .tb-net { bottom:0; right:6%; }
     .tb-gull { top:26px; left:52%; animation:tb-gull 7s ease-in-out infinite; }
     .tb-gull .gull-wing { transform-origin:24px 12px; animation:gull-flap .9s ease-in-out infinite; }
     @keyframes tb-gull { 0%{transform:translate(0,0);} 25%{transform:translate(46px,-30px);} 50%{transform:translate(72px,0);} 75%{transform:translate(46px,30px);} 100%{transform:translate(0,0);} }
