@@ -238,16 +238,25 @@ st.markdown(
     .hero-scene .wave-b { animation:hs-wave 8s ease-in-out infinite reverse; }
     .hero-scene .wave-c { animation:hs-wave 10s ease-in-out infinite; }
     @keyframes hs-wave { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-18px);} }
-    .hero-title { display:flex; align-items:center; gap:7px; margin:8px 0 2px; }
-    .hero-title .ht-icon { flex:0 0 auto; line-height:0; }
-    .hero-title .ht-icon svg { display:block; }
+    .hero-title { display:block; margin:6px 0 2px; text-align:center; }
     .hero-title .ht-text {
-      font-family:'Noto Serif SC',serif; font-size:17px; font-weight:800; letter-spacing:1px; line-height:1.25;
+      font-family:'Noto Serif SC',serif; font-size:19px; font-weight:800; letter-spacing:1px; line-height:1.45;
       color:#ffffff !important; -webkit-text-fill-color:#ffffff;
       text-shadow:0 0 6px rgba(90,179,240,.55), 0 0 14px rgba(90,179,240,.32), 0 1px 2px rgba(10,40,70,.4);
-      white-space:nowrap;
+      white-space:normal; display:block;
     }
-    .hero-sub { color:#ffffff; font-size:12px; letter-spacing:2px; margin:0 0 2px 2px; text-shadow:0 0 5px rgba(90,179,240,.45); }
+    .hero-sub { color:#ffffff; font-size:12px; letter-spacing:3px; margin:2px 0 2px; text-align:center; text-shadow:0 0 5px rgba(90,179,240,.45); }
+    .hero-live { position:relative; margin:2px 0 10px; padding:16px 4px 16px; }
+    .hero-live .dyn { position:absolute; }
+    .hero-live .dyn-gull { top:0; left:2px; animation:dyn-gull 5.5s ease-in-out infinite; }
+    @keyframes dyn-gull { 0%,100%{transform:translateX(0) translateY(0);} 25%{transform:translateX(12px) translateY(-4px);} 50%{transform:translateX(24px) translateY(0);} 75%{transform:translateX(12px) translateY(-3px);} }
+    .hero-live .dyn-net { top:1px; right:6px; animation:dyn-net 10s linear infinite; }
+    @keyframes dyn-net { to{transform:rotate(360deg);} }
+    .hero-live .dyn-wm { bottom:20px; left:2px; }
+    .hero-live .dyn-wm .spin-blades { animation:hs-spin 5s linear infinite; }
+    .hero-live .dyn-sea { bottom:0; left:0; }
+    .hero-live .dyn-sea .wave-a { animation:hs-wave 6s ease-in-out infinite; }
+    .hero-live .dyn-sea .wave-b { animation:hs-wave 8s ease-in-out infinite reverse; }
 
     
     [data-testid="stMetric"] { background:rgba(5,20,40,.92); border:1px solid rgba(196,168,92,.4); border-top:3px solid #c9a227; border-radius:10px; padding:.85rem 1rem; }
@@ -281,48 +290,16 @@ st.markdown(
 
 with st.sidebar:
     st.markdown(
-        '<div class="hero-scene">'
-        '<svg viewBox="0 0 260 134" width="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="display:block;">'
-        '<defs>'
-        '<linearGradient id="hsSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e3457"/><stop offset="1" stop-color="#1e668f"/></linearGradient>'
-        '<linearGradient id="hsSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17608b"/><stop offset="1" stop-color="#06263e"/></linearGradient>'
-        '<linearGradient id="hsTower" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d6e9f6"/><stop offset="1" stop-color="#ffffff"/></linearGradient>'
-        '</defs>'
-        '<rect x="0" y="0" width="260" height="134" fill="url(#hsSky)" rx="10"/>'
-        '<g fill="rgba(255,255,255,.4)"><ellipse cx="40" cy="24" rx="20" ry="6.5"/><ellipse cx="218" cy="30" rx="24" ry="7.5"/><ellipse cx="122" cy="13" rx="16" ry="5"/></g>'
-        '<rect x="0" y="88" width="260" height="46" fill="url(#hsSea)"/>'
-        '<g class="wave-a" fill="none" stroke-linecap="round">'
-        '<path d="M6 96 Q 22 92 38 96 T70 96 T102 96 T134 96 T166 96 T198 96 T230 96 T254 96" stroke="rgba(150,220,248,.35)" stroke-width="1.3"/>'
-        '<path d="M0 110 Q 20 105 40 110 T80 110 T120 110 T160 110 T200 110 T240 110 T256 110" stroke="rgba(150,220,248,.2)" stroke-width="1.1"/>'
-        '</g>'
-        '<g class="wave-b" fill="none" stroke-linecap="round">'
-        '<path d="M4 102 Q 20 98 36 102 T68 102 T100 102 T132 102 T164 102 T196 102 T228 102 T254 102" stroke="rgba(120,200,238,.42)" stroke-width="1.4"/>'
-        '<path d="M2 118 Q 20 113 38 118 T74 118 T110 118 T146 118 T182 118 T218 118 T254 118" stroke="rgba(120,200,238,.18)" stroke-width="1.2"/>'
-        '</g>'
-        '<polygon points="124,100 136,100 133,46 129,46" fill="url(#hsTower)" stroke="#c2d9eb" stroke-width="1"/>'
-        '<circle cx="131" cy="44" r="3.8" fill="#eaf6fe" stroke="#7ec4ee" stroke-width="1"/>'
-        '<g class="spin-blades" style="transform-origin:131px 44px;">'
-        '<g transform="rotate(0 131 44)"><path d="M128.8 44 C126.6 32 127.8 18 131 9 C134.2 18 135.4 32 133.2 44 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6"/></g>'
-        '<g transform="rotate(120 131 44)"><path d="M128.8 44 C126.6 32 127.8 18 131 9 C134.2 18 135.4 32 133.2 44 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6"/></g>'
-        '<g transform="rotate(240 131 44)"><path d="M128.8 44 C126.6 32 127.8 18 131 9 C134.2 18 135.4 32 133.2 44 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6"/></g>'
-        '</g>'
-        '</svg>'
-        '</div>'
+                '<div class="hero-live">'
+        '<svg class="dyn dyn-gull" viewBox="0 0 64 30" width="44" height="21" aria-hidden="true"><path d="M8 22 Q 16 8 26 20 L32 15 L38 20 Q 48 8 56 22" stroke="#dff1fb" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M26 20 L32 15 L38 20 L32 22 Z" fill="#dff1fb"/></svg>'
+        '<svg class="dyn dyn-net" viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="none" stroke="#8fd0f0" stroke-width="2.6"/><ellipse cx="32" cy="32" rx="22" ry="9" fill="none" stroke="#8fd0f0" stroke-width="1.8"/><line x1="10" y1="32" x2="54" y2="32" stroke="#8fd0f0" stroke-width="1.8"/><circle cx="32" cy="10" r="2.6" fill="#8fd0f0"/><circle cx="32" cy="54" r="2.6" fill="#8fd0f0"/><circle cx="10" cy="32" r="2.6" fill="#8fd0f0"/><circle cx="54" cy="32" r="2.6" fill="#8fd0f0"/></svg>'
+        '<svg class="dyn dyn-wm" viewBox="0 0 64 88" width="34" height="46" aria-hidden="true"><polygon points="30,82 34,82 33,46 31,46" fill="#e8f2fa"/><g class="spin-blades" style="transform-origin:32px 44px;"><g transform="rotate(0 32 44)"><path d="M31 44 C29.8 36 30.5 26 32 21 C33.5 26 34.2 36 33 44 Z" fill="#f4fbff"/></g><g transform="rotate(120 32 44)"><path d="M31 44 C29.8 36 30.5 26 32 21 C33.5 26 34.2 36 33 44 Z" fill="#f4fbff"/></g><g transform="rotate(240 32 44)"><path d="M31 44 C29.8 36 30.5 26 32 21 C33.5 26 34.2 36 33 44 Z" fill="#f4fbff"/></g><circle cx="32" cy="44" r="2.6" fill="#dff1fb"/></g></svg>'
         '<div class="hero-title">'
-        '<span class="ht-text">山东海上风电交互平台</span>'
-        '<span class="ht-icon">'
-        '<svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">'
-        '  <circle cx="32" cy="32" r="20" fill="none" stroke="#2f8fd6" stroke-width="3"/>'
-        '  <ellipse cx="32" cy="32" rx="20" ry="8.5" fill="none" stroke="#2f8fd6" stroke-width="2"/>'
-        '  <line x1="32" y1="12" x2="32" y2="52" stroke="#2f8fd6" stroke-width="2"/>'
-        '  <rect x="15" y="30" width="8" height="18" rx="1.5" fill="#3a9bdc"/>'
-        '  <rect x="27" y="22" width="8" height="26" rx="1.5" fill="#2f8fd6"/>'
-        '  <rect x="39" y="14" width="8" height="34" rx="1.5" fill="#1a6fb8"/>'
-        '  <path d="M9 38 l1.2 -2.6 1.2 2.6" fill="#e8c868"/>'
-        '  <path d="M53 33 l1.2 -2.6 1.2 2.6" fill="#e8c868"/>'
-        '</svg></span>'
+        '<span class="ht-text">海风变绿电——山东海上风电时空减碳可视化平台</span>'
         '</div>'
-        '<div class="hero-sub">交互式数据可视化平台</div>',
+        '<div class="hero-sub">交互式数据可视化平台</div>'
+        '<svg class="dyn dyn-sea" viewBox="0 0 240 18" width="100%" aria-hidden="true" style="display:block;"><g class="wave-a" fill="none" stroke-linecap="round"><path d="M4 8 Q 16 4 28 8 T52 8 T76 8 T100 8 T124 8 T148 8 T172 8 T196 8 T220 8 T236 8" stroke="rgba(150,220,248,.5)" stroke-width="1.6"/></g><g class="wave-b" fill="none" stroke-linecap="round"><path d="M0 13 Q 14 9 28 13 T56 13 T84 13 T112 13 T140 13 T168 13 T196 13 T224 13 T240 13" stroke="rgba(120,200,238,.35)" stroke-width="1.4"/></g></svg>'
+        '</div>',
         unsafe_allow_html=True,
     )
     st.markdown("---")
