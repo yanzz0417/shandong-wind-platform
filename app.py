@@ -293,7 +293,7 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
     st.markdown("---")
-    view = st.radio("平台导航", ["📊 发展总览", "📈 时序发展", "🗺️ 空间分布", "🌱 减碳效益"], label_visibility="visible")
+    view = st.radio("平台导航", ["发展总览", "时序发展", "空间分布", "减碳效益"], format_func=lambda x: {"发展总览": "📊 发展总览", "时序发展": "📈 时序发展", "空间分布": "🗺️ 空间分布", "减碳效益": "🌱 减碳效益"}[x], label_visibility="visible")
 
 
 st.markdown('<div class="topbar"><div class="topbrand"><div class="brand-mark"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">  <path d="M32 44 L32 25" stroke="#cfe6f8" stroke-width="3.5" stroke-linecap="round" fill="none"/>  <rect x="26" y="21.5" width="12" height="6.5" rx="2.4" fill="#e0c079"/>  <path d="M32 24 C23 21 17 15 14 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 C41 21 47 15 50 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 V7" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <circle cx="32" cy="24" r="4.4" fill="#e0c079"/>  <path d="M8 53 Q14 47 20 53 T32 53 T44 53 T56 53" stroke="#8fd0f0" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg></div><div><strong>山东海上风电交互平台</strong><span>OFFSHORE WIND · INTERACTIVE EXPLORER</span></div></div><div class="top-actions"><span>面向公众的绿色数据科普</span><span class="top-status"><i></i>数据可视化</span></div></div>', unsafe_allow_html=True)
