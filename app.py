@@ -107,12 +107,21 @@ st.markdown(
     h1,h2,h3,h4 { color:#eef4fa; }
     .mono { font:500 .68rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
     .eyebrow { color:var(--cyan); margin-bottom:.8rem; }
-    .topbar { display:flex; justify-content:space-between; align-items:center; background:#0a1e38; color:#eef4fa; padding:.75rem 1rem; margin:-.3rem 0 1.4rem; min-height:58px; }
-    .topbrand { display:flex; align-items:center; gap:.7rem; }
+    .topbar { position:relative; overflow:hidden; display:flex; justify-content:space-between; align-items:center; background:#0a1e38; color:#eef4fa; padding:.7rem 1rem; margin:-.3rem 0 1.4rem; min-height:66px; }
+    .topbrand { position:relative; z-index:1; display:flex; align-items:center; gap:.7rem; }
     .brand-mark { width:38px; height:38px; display:grid; place-items:center; }
-    .topbrand strong { display:block; font-size:.92rem; letter-spacing:.02em; }
-    .topbrand span { display:block; color:#8ba6bf; font-size:.68rem; margin-top:.12rem; }
-    .top-actions { display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
+    .topbrand strong { display:block; font-size:1.2rem; letter-spacing:.05em; line-height:1.25; font-family:'Noto Serif SC',serif; font-weight:800; }
+    .topbrand span { display:block; color:#8ba6bf; font-size:.68rem; margin-top:.15rem; }
+    .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
+    .tb-dyn { position:absolute; pointer-events:none; z-index:0; }
+    .tb-gull { top:7px; left:33%; animation:tb-gull 6s ease-in-out infinite; }
+    @keyframes tb-gull { 0%,100%{transform:translateX(0) translateY(0);} 30%{transform:translateX(14px) translateY(-6px);} 60%{transform:translateX(28px) translateY(0);} 85%{transform:translateX(14px) translateY(-4px);} }
+    .tb-net { top:5px; right:27%; }
+    .tb-wm { bottom:3px; left:43%; }
+    .tb-sea { bottom:0; left:0; width:100%; }
+    .tb-sea .wave-a { animation:tb-wave 7s ease-in-out infinite; }
+    .tb-sea .wave-b { animation:tb-wave 9s ease-in-out infinite reverse; }
+    @keyframes tb-wave { 0%,100%{transform:translateX(0);} 50%{transform:translateX(-12px);} }
     .top-status { display:inline-flex; align-items:center; gap:.35rem; padding:.3rem .55rem; border:1px solid #3a4a72; color:#e3cd8f; }
     .top-status i { width:6px; height:6px; border-radius:50%; background:#e0b768; display:inline-block; }
     .section-kicker { color:var(--orange); margin:2.2rem 0 .5rem; }
@@ -329,7 +338,20 @@ with st.sidebar:
     view = st.radio("平台导航", ["发展总览", "时序发展", "空间分布", "减碳效益"], format_func=lambda x: {"发展总览": "📊 发展总览", "时序发展": "📈 时序发展", "空间分布": "🗺️ 空间分布", "减碳效益": "🌱 减碳效益"}[x], label_visibility="visible")
 
 
-st.markdown('<div class="topbar"><div class="topbrand"><div class="brand-mark"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">  <path d="M32 44 L32 25" stroke="#cfe6f8" stroke-width="3.5" stroke-linecap="round" fill="none"/>  <rect x="26" y="21.5" width="12" height="6.5" rx="2.4" fill="#e0c079"/>  <path d="M32 24 C23 21 17 15 14 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 C41 21 47 15 50 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 V7" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <circle cx="32" cy="24" r="4.4" fill="#e0c079"/>  <path d="M8 53 Q14 47 20 53 T32 53 T44 53 T56 53" stroke="#8fd0f0" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg></div><div><strong>山东海上风电交互平台</strong><span>OFFSHORE WIND · INTERACTIVE EXPLORER</span></div></div><div class="top-actions"><span>面向公众的绿色数据科普</span><span class="top-status"><i></i>数据可视化</span></div></div>', unsafe_allow_html=True)
+st.markdown(('<div class="topbar">'
+    '<div class="topbrand">'
+    '<div class="brand-mark"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">  <path d="M32 44 L32 25" stroke="#cfe6f8" stroke-width="3.5" stroke-linecap="round" fill="none"/>  <rect x="26" y="21.5" width="12" height="6.5" rx="2.4" fill="#e0c079"/>  <path d="M32 24 C23 21 17 15 14 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 C41 21 47 15 50 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 V7" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <circle cx="32" cy="24" r="4.4" fill="#e0c079"/>  <path d="M8 53 Q14 47 20 53 T32 53 T44 53 T56 53" stroke="#8fd0f0" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg></div>'
+    '<div>'
+    '<strong>海风变绿电——山东海上风电时空减碳可视化平台</strong>'
+    '<span>OFFSHORE WIND · INTERACTIVE EXPLORER</span>'
+    '</div>'
+    '</div>'
+    '<div class="top-actions"><span>面向公众的绿色数据科普</span><span class="top-status"><i></i>数据可视化</span></div>'
+    '<svg class="tb-dyn tb-gull" viewBox="0 0 32 20" width="26" height="16" fill="none"><path d="M3 12 Q9 4 16 10 Q23 4 29 12 Q22 13 16 12 Q10 13 3 12 Z" fill="rgba(255,255,255,.88)"/><path d="M2 15 Q9 9 16 13 Q23 9 30 15 Q23 15 16 14 Q9 15 2 15 Z" fill="rgba(255,255,255,.45)"/></svg>'
+    '<svg class="tb-dyn tb-net" viewBox="0 0 32 32" width="20" height="20"><g><circle cx="16" cy="16" r="10" fill="none" stroke="rgba(95,180,240,.85)" stroke-width="2"/><ellipse cx="16" cy="16" rx="10" ry="4.4" fill="none" stroke="rgba(95,180,240,.7)" stroke-width="1.6"/><line x1="16" y1="6" x2="16" y2="26" stroke="rgba(95,180,240,.7)" stroke-width="1.6"/><circle cx="16" cy="16" r="1.6" fill="#5bb4f0"/><animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="12s" repeatCount="indefinite"/></g></svg>'
+    '<svg class="tb-dyn tb-wm" viewBox="0 0 40 40" width="30" height="30"><rect x="18" y="24" width="4" height="12" rx="1" fill="#eaf6fe"/><circle cx="20" cy="23" r="2" fill="#e0c079"/><g><path d="M18.6 23 C17.4 16 18 7 20 3 C22 7 22.6 16 21.4 23 Z" fill="#f6fbff"/><path d="M18.6 23 C17.4 16 18 7 20 3 C22 7 22.6 16 21.4 23 Z" fill="#f6fbff" transform="rotate(120 20 23)"/><path d="M18.6 23 C17.4 16 18 7 20 3 C22 7 22.6 16 21.4 23 Z" fill="#f6fbff" transform="rotate(240 20 23)"/><animateTransform attributeName="transform" type="rotate" from="0 20 23" to="360 20 23" dur="6s" repeatCount="indefinite"/></g></svg>'
+    '<svg class="tb-dyn tb-sea" viewBox="0 0 300 8" width="100%" height="8" preserveAspectRatio="none" fill="none"><path class="wave-a" d="M0 5 Q25 2 50 5 T100 5 T150 5 T200 5 T250 5 T300 5" stroke="rgba(120,200,238,.5)" stroke-width="1.4"/><path class="wave-b" d="M0 7 Q30 4 60 7 T120 7 T180 7 T240 7 T300 7" stroke="rgba(120,200,238,.25)" stroke-width="1.2"/></svg>'
+    '</div>'), unsafe_allow_html=True)
 top_spacer, top_refresh = st.columns([5.2, 1], gap="small")
 with top_refresh:
     if st.button("↻ 重新生成界面", key="refresh_ui", use_container_width=True, help="清除数据缓存并重新运行当前 Streamlit 页面"):
