@@ -250,6 +250,8 @@ st.markdown(
     .stSlider { width:100% !important; }
     .stSlider [data-baseweb="slider"] { width:100% !important; }
     [data-testid="stSelectbox"] > div { width:100% !important; }
+    [data-testid="stSelectbox"] [data-baseweb="select"] > div { color:#5ab3f0 !important; font-weight:600; }
+
     [data-testid="stSlider"] [role="slider"] { cursor:pointer; }
     .param-note { color:#a9c4dc; font-size:.74rem; line-height:1.55; margin-top:5px; padding-left:2px; }
     .stSlider [data-baseweb="slider"] { background:rgba(5,20,40,.6); }
