@@ -110,7 +110,7 @@ st.markdown(
     .topbar { position:relative; overflow:hidden; display:flex; justify-content:center; align-items:center; background:transparent; color:#ffffff; padding:.7rem 1rem; margin:-.3rem 0 1.4rem; min-height:70px; }
     .topbrand { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:.7rem; }
     .brand-mark { width:48px; height:48px; display:grid; place-items:center; }
-    .topbrand strong { display:block; font-size:1.6rem; letter-spacing:.06em; line-height:1.3; font-family:'Noto Serif SC',serif; font-weight:800; text-align:center; text-shadow:0 2px 8px rgba(0,18,36,.85),0 1px 3px rgba(0,0,0,.6); }
+    .topbrand strong { display:block; font-size:1.6rem; letter-spacing:.06em; line-height:1.3; font-family:'Noto Serif SC',serif; font-weight:800; text-align:center; background:linear-gradient(180deg,#eef9ff 0%,#7fd0ff 25%,#4db8f0 50%,#a8e0ff 78%,#eaf7ff 100%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:.6px rgba(255,255,255,.55); text-shadow:0 2px 10px rgba(20,110,200,.6),0 0 26px rgba(90,190,255,.4); }
     .topbrand span { display:block; color:#d6e6f4; font-size:.8rem; margin-top:.22rem; text-align:center; letter-spacing:.12em; text-shadow:0 1px 4px rgba(0,18,36,.7); }
     .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
     .tb-dyn { position:absolute; pointer-events:none; z-index:0; }
@@ -343,7 +343,6 @@ st.markdown(('<div class="topbar">'
     '<div class="brand-mark"><svg viewBox="0 0 60 60" width="46" height="46" aria-hidden="true"><rect x="27" y="26" width="6" height="32" rx="1.5" fill="#eaf6fe" stroke="#c2d9eb" stroke-width="0.8"/><circle cx="30" cy="24" r="3" fill="#e0c079"/><g><path d="M28 24 C26 16 27 6 30 1 C33 6 34 16 32 24 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6"/><path d="M28 24 C26 16 27 6 30 1 C33 6 34 16 32 24 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6" transform="rotate(120 30 24)"/><path d="M28 24 C26 16 27 6 30 1 C33 6 34 16 32 24 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6" transform="rotate(240 30 24)"/><animateTransform attributeName="transform" type="rotate" from="0 30 24" to="360 30 24" dur="5s" repeatCount="indefinite"/></g><path d="M4 57 Q11 51 18 57 T30 57 T42 57 T54 57" stroke="#8fd0f0" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div>'
     '<div>'
     '<strong>海风变绿电——山东海上风电时空减碳可视化平台</strong>'
-    '<span>OFFSHORE WIND · INTERACTIVE EXPLORER</span>'
     '</div>'
     '</div>'
     '<svg class="tb-dyn tb-gull" viewBox="0 0 32 20" width="26" height="16" fill="none"><path d="M3 12 Q9 4 16 10 Q23 4 29 12 Q22 13 16 12 Q10 13 3 12 Z" fill="rgba(255,255,255,.88)"/><path d="M2 15 Q9 9 16 13 Q23 9 30 15 Q23 15 16 14 Q9 15 2 15 Z" fill="rgba(255,255,255,.45)"/></svg>'
