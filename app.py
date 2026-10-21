@@ -109,7 +109,7 @@ st.markdown(
     .eyebrow { color:var(--cyan); margin-bottom:.8rem; }
     .topbar { position:relative; overflow:hidden; display:flex; justify-content:center; align-items:center; background:transparent; color:#ffffff; padding:.7rem 1rem; margin:-.3rem 0 1.4rem; min-height:70px; }
     .topbrand { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:.7rem; }
-    .brand-mark { width:44px; height:44px; display:grid; place-items:center; }
+    .brand-mark { width:48px; height:48px; display:grid; place-items:center; }
     .topbrand strong { display:block; font-size:1.6rem; letter-spacing:.06em; line-height:1.3; font-family:'Noto Serif SC',serif; font-weight:800; text-align:center; text-shadow:0 2px 8px rgba(0,18,36,.85),0 1px 3px rgba(0,0,0,.6); }
     .topbrand span { display:block; color:#d6e6f4; font-size:.8rem; margin-top:.22rem; text-align:center; letter-spacing:.12em; text-shadow:0 1px 4px rgba(0,18,36,.7); }
     .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
@@ -340,7 +340,7 @@ with st.sidebar:
 
 st.markdown(('<div class="topbar">'
     '<div class="topbrand">'
-    '<div class="brand-mark"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">  <path d="M32 44 L32 25" stroke="#cfe6f8" stroke-width="3.5" stroke-linecap="round" fill="none"/>  <rect x="26" y="21.5" width="12" height="6.5" rx="2.4" fill="#e0c079"/>  <path d="M32 24 C23 21 17 15 14 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 C41 21 47 15 50 8" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <path d="M32 24 V7" stroke="#cfe6f8" stroke-width="3" stroke-linecap="round" fill="none"/>  <circle cx="32" cy="24" r="4.4" fill="#e0c079"/>  <path d="M8 53 Q14 47 20 53 T32 53 T44 53 T56 53" stroke="#8fd0f0" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg></div>'
+    '<div class="brand-mark"><svg viewBox="0 0 60 60" width="46" height="46" aria-hidden="true"><rect x="27" y="36" width="6" height="18" rx="1.5" fill="#eaf6fe"/><circle cx="30" cy="35" r="3" fill="#e0c079"/><g><path d="M28 35 C26 24 27 10 30 3 C33 10 34 24 32 35 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6"/><path d="M28 35 C26 24 27 10 30 3 C33 10 34 24 32 35 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6" transform="rotate(120 30 35)"/><path d="M28 35 C26 24 27 10 30 3 C33 10 34 24 32 35 Z" fill="#f6fbff" stroke="#cfe2f2" stroke-width="0.6" transform="rotate(240 30 35)"/><animateTransform attributeName="transform" type="rotate" from="0 30 35" to="360 30 35" dur="5s" repeatCount="indefinite"/></g><path d="M6 54 Q12 48 18 54 T30 54 T42 54 T54 54" stroke="#8fd0f0" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>'
     '<div>'
     '<strong>海风变绿电——山东海上风电时空减碳可视化平台</strong>'
     '<span>OFFSHORE WIND · INTERACTIVE EXPLORER</span>'
