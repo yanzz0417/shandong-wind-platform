@@ -744,7 +744,7 @@ def carbon():
         '<div style="background:rgba(12,34,52,.5);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
         '<b style="color:#bcd7d2">装机规模（MW）</b><span>×</span><b style="color:#bcd7d2">利用小时（h）</b><span>=</span><b style="color:#e0c079">年发电量（MWh）</b></div>'
         '<div style="background:rgba(12,34,52,.5);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
-        '<b style="color:#e0c079">年发电量（MWh）</b><span>×</span><b style="color:#bcd7d2">排放因子（kgCO₂/kWh）</b><span>=</span><b style="color:#e0c079">年减排量（tCO₂）</b></div>'
+        '<b style="color:#bcd7d2">年发电量（MWh）</b><span>×</span><b style="color:#bcd7d2">排放因子（kgCO₂/kWh）</b><span>=</span><b style="color:#e0c079">年减排量（tCO₂）</b></div>'
         '</div>', unsafe_allow_html=True)
 
     # 04 汇总测算结果
