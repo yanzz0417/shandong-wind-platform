@@ -211,7 +211,7 @@ st.markdown(
     @media (max-width: 560px) { .metric-grid,.story-grid,.chain { grid-template-columns:1fr; } .chain-step { border-right:0; border-bottom:1px solid #33466b; } }
 
     /* ===== 图二·时序页样式（合并自「时序发展分析」原型）===== */
-    .st-key-panel_controls2 { background:rgba(11,39,57,.98); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:9px 15px; margin:12px 0 4px; }
+    .st-key-panel_controls2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:9px 15px; margin:12px 0 4px; }
     .st-key-panel_controls2 [role="radiogroup"] { display:flex; gap:8px; flex-wrap:nowrap; }
     .st-key-panel_controls2 label[data-baseweb="radio"] { flex:1; min-width:65px; margin:0; justify-content:center; padding:6px 11px; border:1px solid rgba(176,218,241,.3); border-radius:8px; background:rgba(10,43,62,.8); cursor:pointer; transition:background .2s,border-color .2s; }
     .st-key-panel_controls2 label[data-baseweb="radio"] p { font-size:14px; color:#d6e4ef; }
@@ -219,11 +219,11 @@ st.markdown(
     .st-key-panel_controls2 label[data-baseweb="radio"]:has(input:checked) { background:rgba(89,227,197,.15); border-color:#59e3c5; box-shadow:inset 0 0 0 1px rgba(89,227,197,.15); }
     .st-key-panel_controls2 label[data-baseweb="radio"]:has(input:checked) p { color:#93f6df; font-weight:600; }
     .st-key-panel_controls2 label[data-baseweb="radio"]:hover { border-color:#8bcfc9; }
-    .st-key-panel_tline2 { background:rgba(7,30,47,.95); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:15px 18px; box-shadow:0 10px 30px rgba(0,10,26,.12); }
+    .st-key-panel_tline2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:15px 18px; box-shadow:0 10px 30px rgba(0,10,26,.12); }
     .t2-year-label { color:#d2e5ef; font-size:13px; white-space:nowrap; line-height:1.5; }
     .t2-year-label strong { color:#59e3c5; font-size:20px; margin-left:7px; font-variant-numeric:tabular-nums; }
     .t2-year-caption { color:#bed3e2; font-size:11px; line-height:1.5; margin-top:2px; }
-    .t2-overview { display:grid; grid-template-columns:minmax(220px,1fr) 3fr; background:rgba(8,32,48,.95); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:16px 22px; gap:22px; margin:12px 0 18px; }
+    .t2-overview { display:grid; grid-template-columns:minmax(220px,1fr) 3fr; background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:16px 22px; gap:22px; margin:12px 0 18px; }
     .t2-metric { border-right:1px solid rgba(176,218,241,.22); padding-right:18px; }
     .t2-metric-label { color:#c9deea; font-size:13px; }
     .t2-metric-value { color:#f3fbff; font-size:32px; line-height:1.2; font-weight:650; font-variant-numeric:tabular-nums; }
