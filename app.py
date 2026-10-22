@@ -471,10 +471,9 @@ def temporal():
         f'<p>{interpretation}</p>'
         f'<div class="t2-reading-note">{row["data_status"] or "官方公开口径"}</div></div>'
         '</div>', unsafe_allow_html=True)
-    st.markdown('<div class="t2-heading"><h3>一条时间轴，看见五年装机变化</h3><span>01 / DEVELOPMENT TIMELINE</span></div>', unsafe_allow_html=True)
+    st.markdown('<div class="t2-heading"><h3>一条时间轴，看见五年装机变化</h3></div>', unsafe_allow_html=True)
     with st.container(key="panel_tline2"):
-        st.markdown('<div class="t2-panel-title">全省海上风电装机 · 公开观测<em>SHANDONG</em></div>'
-                    '<div class="t2-panel-desc">高亮所选年份 · 悬停查看数值与统计日期</div>', unsafe_allow_html=True)
+        st.markdown('<div class="t2-panel-title">全省海上风电装机 · 公开观测</div>', unsafe_allow_html=True)
         values = [v / 10 if pd.notna(v) else None for v in series["cumulative_grid_capacity_mw"]]
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=years, y=values, mode="lines+markers+text", name="累计并网",
