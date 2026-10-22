@@ -227,10 +227,10 @@ st.markdown(
     .t2-year-caption { color:#bed3e2; font-size:.90rem; line-height:1.5; margin-top:2px; }
     .t2-overview { display:grid; grid-template-columns:minmax(220px,1fr) 3fr; background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-top:none; border-radius:0 0 14px 14px; padding:16px 22px; gap:22px; margin:0 0 18px; }
     .t2-metric { border-right:1px solid rgba(176,218,241,.22); padding-right:18px; }
-    .t2-metric-label { color:#c9deea; font-size:13px; }
+    .t2-metric-label { color:#c9deea; font-size:.90rem; }
     .t2-metric-value { color:#f3fbff; font-size:32px; line-height:1.2; font-weight:650; font-variant-numeric:tabular-nums; }
     .t2-metric-value small { color:#c1d8e6; font-size:13px; font-weight:400; margin-left:8px; }
-    .t2-metric-date { color:#b6cfdc; font-size:12px; line-height:1.6; }
+    .t2-metric-date { color:#b6cfdc; font-size:.90rem; line-height:1.6; }
     .t2-metric-date strong { color:#59e3c5; font-weight:500; }
     .t2-reading { align-self:center; }
     .t2-reading-label { color:#59e3c5; font-size:.90rem; font-weight:600; letter-spacing:1px; }
