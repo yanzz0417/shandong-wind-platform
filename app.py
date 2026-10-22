@@ -160,11 +160,11 @@ st.markdown(
     .stButton > button { background:#123d63; color:#f2fbf9; border:1px solid #e0b768; border-radius:2px; font-weight:700; }
     .stButton > button:hover { background:#1a4a7a; color:#ffffff; border-color:#ecd69e; }
     .year-card { background:rgba(10,34,64,.25); border:1px solid rgba(196,162,88,.4); border-radius:14px; padding:1.2rem 1.4rem; }
-    .year-card .big { font-size:2.4rem; font-weight:800; color:#e0b768; line-height:1.1; }
+    .year-card .big { font-size:2.4rem; font-weight:800; color:#ffffff; line-height:1.1; }
     .year-card .unit { font-size:.9rem; color:#9ab4c6; }
     .year-card .lbl { font:600 .68rem 'DM Mono',monospace; letter-spacing:.08em; color:#7fa8a2; margin-bottom:.3rem; }
     .year-card .row { display:flex; justify-content:space-between; border-top:1px dashed rgba(196,162,88,.3); padding:.5rem 0; color:#cfe0ea; font-size:.86rem; }
-    .year-card .row b { color:#e0b768; }
+    .year-card .row b { color:#a9c2d8; }
     .status-tag { display:inline-block; font-size:.72rem; color:#bfd4e3; background:rgba(201,162,39,.18); border:1px solid rgba(201,162,39,.4); padding:.2rem .6rem; border-radius:12px; }
     [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3, [data-testid="stSidebar"] h4,
     [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label,
@@ -175,32 +175,32 @@ st.markdown(
     .footer { border-top:1px solid var(--line); margin-top:3rem; padding-top:1rem; color:#7e97ad; font:.68rem 'DM Mono',monospace; }
     .ov-panel { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:.5rem 1.1rem .95rem; margin:.9rem 0 1.5rem; }
     [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel):not(:has(.ov-panel)){ background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); border-radius:6px; padding:.4rem 1rem 1rem; margin:.9rem 0 1.5rem; }
-    .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { color:#e0bd6f; font:.66rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
+    .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { color:#a9c2d8; font:.66rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
     .overview-section-tag { font-size:1.4rem !important; line-height:1.2; }
     .ov-panel .ov-title, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-title { color:#ffffff; font-family:'Noto Serif SC',serif; font-size:1.3rem; font-weight:700; margin:.22rem 0 .55rem; }
     .ov-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
     .ov-item .lbl { color:#a9c2d8; font-size:.90rem; letter-spacing:.03em; }
     .ov-item .val { color:#ffffff; font-size:1.62rem; font-weight:800; margin:.25rem 0 .15rem; }
-    .ov-item .val em { color:#e0b768; font-style:normal; }
+    .ov-item .val em { color:#c9d7e4; font-style:normal; }
     .ov-item .note { color:#9fb6cd; font-size:.90rem; line-height:1.5; }
     .overview-time { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:1.15rem 1.25rem 1.25rem; margin:1rem 0 1.4rem; }
     .overview-time-head { display:flex; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:.6rem; }
     .overview-time-title { color:#fff; font-family:'Noto Serif SC',serif; font-size:1.28rem; font-weight:700; }
     .overview-time-note { color:#9fb6cd; font-size:.74rem; line-height:1.55; max-width:520px; }
     .overview-insight { background:rgba(8,30,58,.52); border:1px solid rgba(196,162,88,.34); padding:1.15rem 1.2rem; min-height:100%; }
-    .overview-insight .eyebrow { margin:0 0 .45rem; color:#e0bd6f; }
+    .overview-insight .eyebrow { margin:0 0 .45rem; color:#a9c2d8; }
     .overview-insight h3 { color:#fff; font-family:'Noto Serif SC',serif; font-size:1.35rem; margin:.1rem 0 .85rem; }
-    .overview-insight .big { color:#e0b768; font-size:2.45rem; font-weight:800; line-height:1.05; }
+    .overview-insight .big { color:#ffffff; font-size:2.45rem; font-weight:800; line-height:1.05; }
     .overview-insight .unit { color:#b8ccdc; font-size:.86rem; }
     .overview-insight .line { display:flex; justify-content:space-between; gap:1rem; border-top:1px dashed rgba(196,168,90,.28); padding:.55rem 0; color:#cce0ea; font-size:.8rem; }
     .overview-insight .line b { color:#fff; }
     .overview-alert { color:#dfc083; background:rgba(94,72,20,.28); border-left:3px solid #d9b061; padding:.7rem .85rem; margin-top:.8rem; font-size:.75rem; line-height:1.55; }
     .overview-summary-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:0 0 1.4rem; }
     .overview-summary { background:rgba(6,22,44,.66); border:1px solid rgba(196,168,92,.32); padding:1rem 1.15rem; }
-    .overview-summary .tag { color:#e0bd6f; font:500 .65rem 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
+    .overview-summary .tag { color:#a9c2d8; font:500 .65rem 'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; }
     .overview-summary h3 { color:#fff; font-family:'Noto Serif SC',serif; font-size:1.05rem; margin:.35rem 0 .8rem; }
     .overview-summary .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:.7rem; }
-    .overview-summary .stats b { display:block; color:#e0b768; font-size:1.22rem; }
+    .overview-summary .stats b { display:block; color:#ffffff; font-size:1.22rem; }
     .overview-summary .stats span { color:#a9c2d8; font-size:.69rem; line-height:1.4; }
     @media (max-width:900px) { .overview-summary-grid { grid-template-columns:1fr; } .overview-time-head { display:block; } }
     @media (max-width:900px) { .ov-grid { grid-template-columns:1fr; } }
@@ -724,9 +724,9 @@ def carbon():
     st.markdown(
         '<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:4px 0 6px;">'
         '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:.85rem;display:inline-flex;gap:8px;align-items:center;">'
-        '<b style="color:#e0c079">装机规模 MW</b><span>×</span><b style="color:#e0c079">利用小时 h</b><span>=</span><b style="color:#e0c079">年发电量 MWh</b></div>'
+        '<b style="color:#bcd7d2">装机规模 MW</b><span>×</span><b style="color:#bcd7d2">利用小时 h</b><span>=</span><b style="color:#bcd7d2">年发电量 MWh</b></div>'
         '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:.85rem;display:inline-flex;gap:8px;align-items:center;">'
-        '<b style="color:#e0c079">年发电量 MWh</b><span>×</span><b style="color:#e0c079">排放因子 kgCO₂/kWh</b><span>=</span><b style="color:#e0c079">年减排量 tCO₂</b></div>'
+        '<b style="color:#e0c079">年发电量 MWh</b><span>×</span><b style="color:#bcd7d2">排放因子 kgCO₂/kWh</b><span>=</span><b style="color:#bcd7d2">年减排量 tCO₂</b></div>'
         '</div>', unsafe_allow_html=True)
 
     # 04 汇总测算结果
@@ -760,7 +760,7 @@ def overview_page_new():
 
     left, right = st.columns([1.65, .9], gap="large")
     with left:
-        st.markdown('<div class="overview-time"><div class="overview-time-head"><div><div class="mono" style="color:#e0bd6f">01 · 装机时序总体结果</div><div class="overview-time-title">装机规模与绿色电量同步增长</div></div><div class="overview-time-note">柱状表示年度发电量，折线表示累计装机；2025 年暂未收录，因此不对缺失年份进行插值。</div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="overview-time"><div class="overview-time-head"><div><div class="mono" style="color:#a9c2d8">01 · 装机时序总体结果</div><div class="overview-time-title">装机规模与绿色电量同步增长</div></div><div class="overview-time-note">柱状表示年度发电量，折线表示累计装机；2025 年暂未收录，因此不对缺失年份进行插值。</div></div>', unsafe_allow_html=True)
         fig = go.Figure()
         fig.add_bar(x=valid["year"], y=valid["generation_gwh"], name="年度发电量", marker_color="#c9a227", opacity=.78, hovertemplate="%{x} 年<br/>发电量 %{y:,.0f} GWh<extra></extra>")
         fig.add_scatter(x=valid["year"], y=valid["capacity_mw"], name="累计装机", mode="lines+markers", yaxis="y2", line=dict(color="#e0b768", width=3), marker=dict(size=8, color="#e0b768"), hovertemplate="%{x} 年<br/>装机 %{y:,.0f} MW<extra></extra>")
