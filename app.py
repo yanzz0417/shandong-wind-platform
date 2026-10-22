@@ -129,6 +129,7 @@ st.markdown(
     .section-kicker { color:var(--orange); margin:2.2rem 0 .5rem; }
     .section-title { font-family:'Noto Serif SC',serif; color:#e0b768; font-size:1.8rem; font-weight:700; margin:0 0 .85rem; }
     .section-copy { color:#c2d3df; line-height:1.8; max-width:800px; font-size:.95rem; }
+    .carbon-section-copy { white-space:nowrap; max-width:none; font-size:.72rem; }
     .metric-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:1.3rem 0 2rem; }
     .metric { background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--cyan); padding:1rem 1.15rem 1.1rem; min-height:105px; }
     .metric:nth-child(3) { border-top-color:var(--orange); }
@@ -209,9 +210,10 @@ st.markdown(
     @media (max-width:900px) { .ov-grid { grid-template-columns:1fr; } }
     @media (max-width: 900px) { .block-container { padding:1.2rem 1rem 2rem; } .metric-grid,.story-grid,.chain { grid-template-columns:repeat(2,1fr); } .top-actions { display:none; } }
     @media (max-width: 560px) { .metric-grid,.story-grid,.chain { grid-template-columns:1fr; } .chain-step { border-right:0; border-bottom:1px solid #33466b; } }
+    @media (max-width:900px) { .carbon-section-copy { white-space:normal; } }
 
     /* ===== 图二·时序页样式（合并自「时序发展分析」原型）===== */
-    .st-key-panel_controls2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:9px 15px; margin:12px 0 4px; }
+    .st-key-panel_controls2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-bottom:none; border-radius:14px 14px 0 0; padding:9px 15px; margin:12px 0 0; }
     .st-key-panel_controls2 [role="radiogroup"] { display:flex; gap:8px; flex-wrap:nowrap; }
     .st-key-panel_controls2 label[data-baseweb="radio"] { flex:1; min-width:65px; margin:0; justify-content:center; padding:6px 11px; border:1px solid rgba(176,218,241,.3); border-radius:8px; background:rgba(10,43,62,.8); cursor:pointer; transition:background .2s,border-color .2s; }
     .st-key-panel_controls2 label[data-baseweb="radio"] p { font-size:14px; color:#d6e4ef; }
@@ -223,7 +225,7 @@ st.markdown(
     .t2-year-label { color:#d2e5ef; font-size:13px; white-space:nowrap; line-height:1.5; }
     .t2-year-label strong { color:#59e3c5; font-size:20px; margin-left:7px; font-variant-numeric:tabular-nums; }
     .t2-year-caption { color:#bed3e2; font-size:11px; line-height:1.5; margin-top:2px; }
-    .t2-overview { display:grid; grid-template-columns:minmax(220px,1fr) 3fr; background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:16px 22px; gap:22px; margin:12px 0 18px; }
+    .t2-overview { display:grid; grid-template-columns:minmax(220px,1fr) 3fr; background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-top:none; border-radius:0 0 14px 14px; padding:16px 22px; gap:22px; margin:0 0 18px; }
     .t2-metric { border-right:1px solid rgba(176,218,241,.22); padding-right:18px; }
     .t2-metric-label { color:#c9deea; font-size:13px; }
     .t2-metric-value { color:#f3fbff; font-size:32px; line-height:1.2; font-weight:650; font-variant-numeric:tabular-nums; }
