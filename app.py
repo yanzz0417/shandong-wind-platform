@@ -221,7 +221,7 @@ st.markdown(
     .st-key-panel_controls2 label[data-baseweb="radio"]:has(input:checked) { background:rgba(89,227,197,.15); border-color:#59e3c5; box-shadow:inset 0 0 0 1px rgba(89,227,197,.15); }
     .st-key-panel_controls2 label[data-baseweb="radio"]:has(input:checked) p { color:#93f6df; font-weight:600; }
     .st-key-panel_controls2 label[data-baseweb="radio"]:hover { border-color:#8bcfc9; }
-    .st-key-panel_tline2 { background:rgba(6,22,44,.45); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:14px 16px 10px; margin:0 0 14px; }
+    .st-key-panel_tline2 { background:transparent; border:none; border-radius:0; padding:0; box-shadow:none; }
     .t2-year-label { color:#d2e5ef; font-size:.90rem; white-space:nowrap; line-height:1.5; }
     .t2-year-label strong { color:#59e3c5; font-size:20px; margin-left:7px; font-variant-numeric:tabular-nums; }
     .t2-year-caption { color:#bed3e2; font-size:.90rem; line-height:1.5; margin-top:2px; }
@@ -485,7 +485,7 @@ def temporal():
         fig.add_trace(go.Scatter(x=[year], y=[cum_wan], mode="markers", name=f"所选 {year} 年",
                                  marker=dict(size=16, color="#59e3c5", line=dict(color="#e2fff7", width=2)),
                                  hovertemplate="%{x} 年<br/><b>%{y:g} 万千瓦</b><extra></extra>"))
-        fig.update_xaxes(tickmode="array", tickvals=years, showgrid=False, zeroline=False, tickfont_color="#a6c2d7")
+        fig.update_xaxes(tickmode="array", tickvals=years, showgrid=False, zeroline=False, tickfont_color="#a6c2d7", domain=[0.07,0.93])
         fig.update_yaxes(gridcolor="rgba(180,218,239,.10)", zeroline=False, tickfont_color="#a6c2d7",
                          title="万千瓦", range=[0, max(v for v in values if v is not None) * 1.3])
         fig.update_layout(height=330, margin=dict(l=6, r=55, t=20, b=6),
