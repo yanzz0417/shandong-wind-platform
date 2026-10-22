@@ -221,7 +221,7 @@ st.markdown(
     .st-key-panel_controls2 label[data-baseweb="radio"]:has(input:checked) { background:rgba(89,227,197,.15); border-color:#59e3c5; box-shadow:inset 0 0 0 1px rgba(89,227,197,.15); }
     .st-key-panel_controls2 label[data-baseweb="radio"]:has(input:checked) p { color:#93f6df; font-weight:600; }
     .st-key-panel_controls2 label[data-baseweb="radio"]:hover { border-color:#8bcfc9; }
-    .st-key-panel_tline2 { background:transparent; border:none; border-radius:0; padding:0; box-shadow:none; }
+    .st-key-panel_tline2 { background:rgba(6,22,44,.45); border:1px solid rgba(176,218,241,.22); border-radius:14px; padding:14px 16px 10px; margin:0 0 14px; }
     .t2-year-label { color:#d2e5ef; font-size:.90rem; white-space:nowrap; line-height:1.5; }
     .t2-year-label strong { color:#59e3c5; font-size:20px; margin-left:7px; font-variant-numeric:tabular-nums; }
     .t2-year-caption { color:#bed3e2; font-size:.90rem; line-height:1.5; margin-top:2px; }
