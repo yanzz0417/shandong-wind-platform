@@ -286,6 +286,7 @@ st.markdown(
     .st-key-carbon_hours [data-testid="stSliderThumbValue"],
     .st-key-carbon_hours [data-testid="stSliderTickBarMin"],
     .st-key-carbon_hours [data-testid="stSliderTickBarMax"] { font-size:1.0rem !important; }
+    [data-testid="stMetric"] { background: rgba(240,242,246,.15) !important; }
     .stSlider [data-baseweb="slider"] { background:rgba(5,20,40,.6); }
 
     /* 深底高亮：所有控件文字统一提亮，保证黑底上也看得清 */
@@ -677,7 +678,7 @@ def render_carbon_status(frame, hours, factor, label, note, color):
         customdata=res2[["capacity_mw", "name"]]))
     figg.update_layout(title=dict(text=f"{label} · 各项目年发电量测算（亿 kWh/年）", font=dict(color="#ffffff", size=13, family="Microsoft YaHei, sans-serif")), height=max(280, len(res2) * 30 + 50),
         margin=dict(l=100, r=72, t=40, b=28),
-        paper_bgcolor="rgba(8,28,46,0.8)", plot_bgcolor="rgba(6,20,34,0.62)",
+        paper_bgcolor="rgba(8,28,46,0.5)", plot_bgcolor="rgba(6,20,34,0.4)",
         font=dict(family="Microsoft YaHei, sans-serif", size=12, color="#ffffff"),
         xaxis=dict(title="亿 kWh / 年", gridcolor="#213746", range=[0, max(gen_vals) * 1.22]),
         yaxis=dict(showgrid=False, autorange="reversed", tickfont=dict(size=10.5, color="#ffffff")))
@@ -691,7 +692,7 @@ def render_carbon_status(frame, hours, factor, label, note, color):
         customdata=res2[["capacity_mw", "name"]]))
     figr.update_layout(title=dict(text=f"{label} · 各项目年减碳测算（万吨 CO₂/年）", font=dict(color="#ffffff", size=13, family="Microsoft YaHei, sans-serif")), height=max(280, len(res2) * 30 + 50),
         margin=dict(l=100, r=72, t=40, b=28),
-        paper_bgcolor="rgba(8,28,46,0.8)", plot_bgcolor="rgba(6,20,34,0.62)",
+        paper_bgcolor="rgba(8,28,46,0.5)", plot_bgcolor="rgba(6,20,34,0.4)",
         font=dict(family="Microsoft YaHei, sans-serif", size=12, color="#ffffff"),
         xaxis=dict(title="万吨 CO₂ / 年", gridcolor="#213746", range=[0, max(red_vals) * 1.22]),
         yaxis=dict(showgrid=False, autorange="reversed", tickfont=dict(size=10.5, color="#ffffff")))
@@ -735,9 +736,9 @@ def carbon():
     step("03", "计算公式与测算口径")
     st.markdown(
         '<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:4px 0 6px;">'
-        '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
+        '<div style="background:rgba(12,34,52,.5);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
         '<b style="color:#bcd7d2">装机规模 MW</b><span>×</span><b style="color:#bcd7d2">利用小时 h</b><span>=</span><b style="color:#bcd7d2">年发电量 MWh</b></div>'
-        '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
+        '<div style="background:rgba(12,34,52,.5);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
         '<b style="color:#e0c079">年发电量 MWh</b><span>×</span><b style="color:#bcd7d2">排放因子 kgCO₂/kWh</b><span>=</span><b style="color:#bcd7d2">年减排量 tCO₂</b></div>'
         '</div>', unsafe_allow_html=True)
 
