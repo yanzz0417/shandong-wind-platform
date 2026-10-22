@@ -213,7 +213,7 @@ st.markdown(
     @media (max-width:900px) { .carbon-section-copy { white-space:normal; } }
 
     /* ===== 图二·时序页样式（合并自「时序发展分析」原型）===== */
-    .st-key-panel_controls2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-bottom:none; border-radius:14px 14px 0 0; padding:9px 15px; margin:12px 0 -16px; }
+    .st-key-panel_controls2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-bottom:1px solid rgba(176,218,241,.22); border-radius:14px 14px 0 0; padding:9px 15px; margin:12px 0 -16px; }
     .st-key-panel_controls2 [role="radiogroup"] { display:flex; gap:8px; flex-wrap:nowrap; }
     .st-key-panel_controls2 label[data-baseweb="radio"] { flex:1; min-width:65px; margin:0; justify-content:center; padding:6px 11px; border:1px solid rgba(176,218,241,.3); border-radius:8px; background:rgba(10,43,62,.8); cursor:pointer; transition:background .2s,border-color .2s; }
     .st-key-panel_controls2 label[data-baseweb="radio"] p { font-size:14px; color:#d6e4ef; }
