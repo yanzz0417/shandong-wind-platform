@@ -246,9 +246,9 @@ st.markdown(
     .t2-scope strong { color:#a5efde; font-weight:500; }
     .st-key-t2_scope_area summary span { font-size:.90rem !important; }
     .st-key-spatial_status_filter [data-testid="stWidgetLabel"] { font-size:.90rem !important; }
-    [data-testid="stSidebar"] [data-testid="stRadio"] [data-testid="stWidgetLabel"] { font-size:1.5rem !important; }
+    [data-testid="stSidebar"] [data-testid="stRadio"] [data-testid="stWidgetLabel"] { font-size:1.3rem !important; }
     [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label,
-    [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label p { font-size:1.5rem !important; white-space:nowrap !important; }
+    [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label p { font-size:1.3rem !important; white-space:nowrap !important; }
     @media (max-width:640px) { .t2-overview { grid-template-columns:1fr; padding:13px; gap:10px; } .t2-metric { border-right:0; border-bottom:1px solid rgba(176,218,241,.22); padding:0 0 10px; } .st-key-panel_controls2 [data-testid="stHorizontalBlock"] { flex-direction:column; gap:5px; } .st-key-panel_controls2 [data-testid="stColumn"] { width:100%!important; flex:1 1 100%!important; min-width:0; } .t2-year-caption { display:none; } }
 
 
