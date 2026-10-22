@@ -295,7 +295,7 @@ st.markdown(
     }
     /* 恢复默认值按钮: 定位到滑块面板框右上角 + 红色文字 */
     [data-testid="stColumn"]:has(.st-key-reset_carbon_hours) { position:relative; }
-    .st-key-reset_carbon_hours { position:absolute; top:12px; right:14px; z-index:30; }
+    .st-key-reset_carbon_hours { position:absolute; top:30px; right:14px; z-index:30; display:flex; justify-content:flex-end; }
     .st-key-reset_carbon_hours button {
       color:#ff5a5a !important; font-weight:600; font-size:.8rem;
       background:rgba(30,8,8,.25) !important; border:1px solid rgba(255,90,90,.5) !important;
