@@ -283,6 +283,9 @@ st.markdown(
     .st-key-carbon_status [data-testid="stRadio"] label { font-size:1.0rem !important; }
     .st-key-carbon_hours p, .st-key-carbon_hours [data-testid="stWidgetLabel"] { font-size:1.0rem !important; }
     .st-key-carbon_factor p, .st-key-carbon_factor [data-testid="stWidgetLabel"] { font-size:1.0rem !important; }
+    .st-key-carbon_hours [data-testid="stSliderThumbValue"],
+    .st-key-carbon_hours [data-testid="stSliderTickBarMin"],
+    .st-key-carbon_hours [data-testid="stSliderTickBarMax"] { font-size:1.0rem !important; }
     .stSlider [data-baseweb="slider"] { background:rgba(5,20,40,.6); }
 
     /* 深底高亮：所有控件文字统一提亮，保证黑底上也看得清 */
