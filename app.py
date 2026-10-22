@@ -278,7 +278,9 @@ st.markdown(
     [data-testid="stSelectbox"] [data-baseweb="select"] > div { color:#5ab3f0 !important; font-weight:600; }
 
     [data-testid="stSlider"] [role="slider"] { cursor:pointer; }
-    .param-note { color:#a9c4dc; font-size:.74rem; line-height:1.55; margin-top:5px; padding-left:2px; }
+    .param-note { color:#a9c4dc; font-size:1.0rem; line-height:1.55; margin-top:5px; padding-left:2px; }
+    .st-key-carbon_status [data-testid="stWidgetLabel"] { font-size:1.0rem !important; }
+    .st-key-carbon_status [data-testid="stRadio"] label { font-size:1.0rem !important; }
     .stSlider [data-baseweb="slider"] { background:rgba(5,20,40,.6); }
 
     /* 深底高亮：所有控件文字统一提亮，保证黑底上也看得清 */
@@ -728,9 +730,9 @@ def carbon():
     step("03", "计算公式与测算口径")
     st.markdown(
         '<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:4px 0 6px;">'
-        '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:.85rem;display:inline-flex;gap:8px;align-items:center;">'
+        '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
         '<b style="color:#bcd7d2">装机规模 MW</b><span>×</span><b style="color:#bcd7d2">利用小时 h</b><span>=</span><b style="color:#bcd7d2">年发电量 MWh</b></div>'
-        '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:.85rem;display:inline-flex;gap:8px;align-items:center;">'
+        '<div style="background:rgba(12,34,52,.85);border:1px solid rgba(196,168,92,.32);border-radius:10px;padding:8px 14px;color:#ffffff;font-size:1.0rem;display:inline-flex;gap:8px;align-items:center;">'
         '<b style="color:#e0c079">年发电量 MWh</b><span>×</span><b style="color:#bcd7d2">排放因子 kgCO₂/kWh</b><span>=</span><b style="color:#bcd7d2">年减排量 tCO₂</b></div>'
         '</div>', unsafe_allow_html=True)
 
