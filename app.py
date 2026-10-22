@@ -154,7 +154,7 @@ st.markdown(
     .source-box { background:rgba(13,42,74,.78); border:1px dashed #4a5c80; padding:.9rem 1rem; color:#6b8499; font-size:.76rem; line-height:1.7; }
     div[data-testid="stSelectbox"] input[aria-label*="替代电力排放因子"] { color:#ff3b30 !important; }
     div[data-testid="stSelectbox"]:has(input[aria-label*="替代电力排放因子"]) [data-baseweb="select"] [class*="ValueContainer"] { color:#ff3b30 !important; }
-    div[data-testid="stSelectbox"]:has(input[aria-label*="替代电力排放因子"]) [data-baseweb="select"] [class*="ValueContainer"] span { color:#ff3b30 !important; }
+    div[data-testid="stSelectbox"]:has(input[aria-label*="替代电力排放因子"]) [data-baseweb="select"] * { color:#ff3b30 !important; }
     .source-links { margin-top:.55rem; padding-top:.45rem; border-top:1px solid rgba(160,150,100,.24); color:#6b8499; }
     .source-links a { color:#3d7db0 !important; text-decoration:underline; text-underline-offset:2px; font-weight:700; }
     .source-links a:hover { color:#123d63 !important; }
