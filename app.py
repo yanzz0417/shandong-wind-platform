@@ -890,7 +890,7 @@ def overview_summary():
     """发展总览：时序 / 空间 / 减碳 三项核心结果的最终结论，不展开过程交互。"""
     st.markdown('<div class="mono section-kicker">01 / OVERVIEW</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-title">发展总览 · 山东海上风电</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-copy">按“时序发展—空间分布—减碳效益”汇总山东海上风电公开数据与模型测算的最终结果；完整交互图表与项目地图见左侧对应模块。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-copy" style="white-space:nowrap;max-width:100%;">按“时序发展—空间分布—减碳效益”汇总山东海上风电公开数据与模型测算的最终结果；完整交互图表与项目地图见左侧对应模块。</div>', unsafe_allow_html=True)
 
     # ---- 01 时序发展 · 装机规模趋势（最终结果）----
     trend_years = [2021, 2022, 2023, 2024, 2025]
