@@ -427,7 +427,7 @@ def temporal_charts(series, highlight_year):
 
 def temporal():
     st.markdown('<div class="section-title"><span class="sec-num">02</span> · 时序发展 · 山东海上风电装机变化</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-copy">通过年份联动查看 2021—2025 年已公开并网数据，观察年度新增与累计并网规模。两类统计口径分开展示；缺失年份不插值，项目规划/建设容量不计入并网时序。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-copy" style="white-space:nowrap;font-size:.72rem;max-width:100%;">通过年份联动查看 2021—2025 年已公开并网数据，观察年度新增与累计并网规模。两类统计口径分开展示；缺失年份不插值，项目规划/建设容量不计入并网时序。</div>', unsafe_allow_html=True)
     series = temporal_series()
     with st.container(key="panel_controls2"):
         label_col, year_col = st.columns([1, 4.6], vertical_alignment="center")
