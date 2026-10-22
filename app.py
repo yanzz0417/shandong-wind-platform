@@ -222,9 +222,9 @@ st.markdown(
     .st-key-panel_controls2 label[data-baseweb="radio"]:has(input:checked) p { color:#93f6df; font-weight:600; }
     .st-key-panel_controls2 label[data-baseweb="radio"]:hover { border-color:#8bcfc9; }
     .st-key-panel_tline2 { background:transparent; border:none; border-radius:0; padding:0; box-shadow:none; }
-    .t2-year-label { color:#d2e5ef; font-size:13px; white-space:nowrap; line-height:1.5; }
+    .t2-year-label { color:#d2e5ef; font-size:.90rem; white-space:nowrap; line-height:1.5; }
     .t2-year-label strong { color:#59e3c5; font-size:20px; margin-left:7px; font-variant-numeric:tabular-nums; }
-    .t2-year-caption { color:#bed3e2; font-size:11px; line-height:1.5; margin-top:2px; }
+    .t2-year-caption { color:#bed3e2; font-size:.90rem; line-height:1.5; margin-top:2px; }
     .t2-overview { display:grid; grid-template-columns:minmax(220px,1fr) 3fr; background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-top:none; border-radius:0 0 14px 14px; padding:16px 22px; gap:22px; margin:0 0 18px; }
     .t2-metric { border-right:1px solid rgba(176,218,241,.22); padding-right:18px; }
     .t2-metric-label { color:#c9deea; font-size:13px; }
