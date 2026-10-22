@@ -245,7 +245,7 @@ st.markdown(
     .t2-scope { color:#d2e4ef; font-size:.90rem; line-height:1.8; margin-top:6px; }
     .t2-scope strong { color:#a5efde; font-weight:500; }
     .st-key-t2_scope_area summary span { font-size:.90rem !important; }
-    .st-key-spatial_status_filter [data-testid="stWidgetLabel"] { font-size:.90rem !important; }
+    .st-key-spatial_status_filter [data-testid="stWidgetLabel"] { font-size:1rem !important; color:#ffffff !important; }
     [data-testid="stSidebar"] [data-testid="stRadio"] [data-testid="stWidgetLabel"] { font-size:1.3rem !important; }
     [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label,
     [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label p { font-size:1.3rem !important; white-space:nowrap !important; }
