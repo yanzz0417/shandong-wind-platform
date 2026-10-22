@@ -732,12 +732,16 @@ def carbon():
 
     # 02 设置测算参数
     step("02", "设置测算参数")
+    if "carbon_hours" not in st.session_state:
+        st.session_state["carbon_hours"] = 2860
+    if "carbon_factor" not in st.session_state:
+        st.session_state["carbon_factor"] = 0.6191
     p1, p2 = st.columns(2, gap="large")
     with p1:
         if st.button("恢复默认值", key="reset_carbon_hours", help="将年等效利用小时数恢复为 2,860 h"):
             st.session_state["carbon_hours"] = 2860
             st.rerun()
-        hours = st.slider("年等效利用小时数 / h", 1000, 8760, 2860, 100, key="carbon_hours")
+        hours = st.slider("年等效利用小时数 / h", 1000, 8760, 100, key="carbon_hours")
         st.markdown('<div class="param-note"><a href="http://fgw.shandong.gov.cn/art/2025/12/22/art_91687_10480950.html" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">依据：海上风电年等效利用小时常取 2,860 h 作为测算基准，可按项目实际运行情况调整。</a></div>', unsafe_allow_html=True)
     with p2:
         factor_map = {0.5306: "全国平均 · 2023年", 0.6191: "山东省 · 2023年", 0.6361: "华北区域 · 2023年"}
