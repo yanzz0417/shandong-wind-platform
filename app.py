@@ -518,7 +518,7 @@ def temporal():
                     "year": "年份", "new_grid_capacity_mw": "年度新增并网 MW",
                     "cumulative_grid_capacity_mw": "累计并网 MW", "data_status": "公开统计口径"})
                 st.dataframe(table, use_container_width=True, hide_index=True)
-    st.markdown('<div class="source-box"><b>数据口径</b> 年度新增并网与累计并网分别统计；已公开的统计节点截至当年11月底。官方未公布或口径不连续的年份保留空缺，不进行插值；规划、核准和建设容量不纳入并网时序。<div class="source-links"><b>2025年官方发布：</b><a href="http://www.shandong.gov.cn/art/2025/11/7/art_97904_692537.html" target="_blank" rel="noopener">山东省人民政府：建成海上风电592万千瓦（2025-11）</a><span> · </span><a href="http://fgw.shandong.gov.cn/art/2025/11/6/art_91104_10478552.html" target="_blank" rel="noopener">省发改委新闻发布会</a></div>' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
+    st.markdown('<div class="source-box"><b>数据口径</b> 年度新增并网与累计并网分别统计；已公开的统计节点截至当年11月底。官方未公布或口径不连续的年份保留空缺，不进行插值；规划、核准和建设容量不纳入并网时序。<div class="source-links"><b>数据来源：</b><a href="http://www.shandong.gov.cn/art/2025/11/7/art_97904_692537.html" target="_blank" rel="noopener">山东省人民政府：建成海上风电592万千瓦（2025-11）</a><span> · </span><a href="http://fgw.shandong.gov.cn/art/2025/11/6/art_91104_10478552.html" target="_blank" rel="noopener">山东省发展和改革委员会（新闻发布会）</a></div></div>', unsafe_allow_html=True)
 
 
 def project_timeline_legacy():
@@ -946,7 +946,7 @@ def overview_summary():
                 f'<div class="ov-item"><div class="lbl">度电减排强度</div><div class="val">0.53 <em>kgCO₂/kWh</em></div><div class="note">单位上网电量碳减排强度，按电力排放因子 0.5306 kgCO₂/kWh 测算</div></div>'
                 f'</div></div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="source-box"><b>数据说明</b> 时序为山东省累计并网口径（2021 年首批并网实现零突破）；项目容量与状态依据山东省公开项目资料整理；减碳结果按 2,860 h/年等效利用小时与 0.5306 kgCO₂/kWh 排放因子模型测算，不等同于现场监测值。<div class="source-links"><b>2025年官方发布：</b><a href="http://www.shandong.gov.cn/art/2025/11/7/art_97904_692537.html" target="_blank" rel="noopener">山东省人民政府：建成海上风电592万千瓦（2025-11）</a><span> · </span><a href="http://fgw.shandong.gov.cn/art/2025/11/6/art_91104_10478552.html" target="_blank" rel="noopener">省发改委新闻发布会</a></div>' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
+    st.markdown('<div class="source-box"><b>数据说明</b> 时序为山东省累计并网口径（2021 年首批并网实现零突破）；项目容量与状态依据山东省公开项目资料整理；减碳结果按 2,860 h/年等效利用小时与 0.5306 kgCO₂/kWh 排放因子模型测算，不等同于现场监测值。<div class="source-links"><b>数据来源：</b><a href="http://www.shandong.gov.cn/art/2025/11/7/art_97904_692537.html" target="_blank" rel="noopener">山东省人民政府：建成海上风电592万千瓦（2025-11）</a><span> · </span><a href="http://fgw.shandong.gov.cn/art/2025/11/6/art_91104_10478552.html" target="_blank" rel="noopener">山东省发展和改革委员会（新闻发布会）</a></div></div>', unsafe_allow_html=True)
 
 
 
