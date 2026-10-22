@@ -175,12 +175,13 @@ st.markdown(
     .footer { border-top:1px solid var(--line); margin-top:3rem; padding-top:1rem; color:#7e97ad; font:.68rem 'DM Mono',monospace; }
     .ov-panel { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:.5rem 1.1rem .95rem; margin:.9rem 0 1.5rem; }
     [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel):not(:has(.ov-panel)){ background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); border-radius:6px; padding:.4rem 1rem 1rem; margin:.9rem 0 1.5rem; }
-    .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { color:#e0bd6f; font-size:2.3rem; line-height:1.2; font-family:'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
+    .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { color:#e0bd6f; font:.66rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
+    .overview-section-tag { font-size:2.3rem !important; line-height:1.2; }
     .ov-panel .ov-title, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-title { color:#ffffff; font-family:'Noto Serif SC',serif; font-size:1.3rem; font-weight:700; margin:.22rem 0 .55rem; }
     .ov-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
     .ov-item .lbl { color:#a9c2d8; font-size:.74rem; letter-spacing:.03em; }
     .ov-item .val { color:#ffffff; font-size:1.62rem; font-weight:800; margin:.25rem 0 .15rem; }
-    .ov-item .val em { color:#e0b768; font-style:normal; }
+    .ov-item .val em { color:#e0b768; font-style:normal; font-size:.90rem; }
     .ov-item .note { color:#9fb6cd; font-size:.68rem; line-height:1.5; }
     .overview-time { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:1.15rem 1.25rem 1.25rem; margin:1rem 0 1.4rem; }
     .overview-time-head { display:flex; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:.6rem; }
@@ -875,7 +876,7 @@ def overview_summary():
     latest_cap = trend_cap[-1]
     ratio = latest_cap / trend_cap[0]
 
-    st.markdown('<div class="ov-panel"><div class="ov-tag">01 · 时序发展 · 装机规模</div><div class="ov-title">2021—2025 装机规模变化趋势 · 累计并网</div>', unsafe_allow_html=True)
+    st.markdown('<div class="ov-panel"><div class="ov-tag overview-section-tag">01 · 时序发展 · 装机规模</div><div class="ov-title">2021—2025 装机规模变化趋势 · 累计并网</div>', unsafe_allow_html=True)
     fig = go.Figure()
     fig.add_scatter(x=trend_years, y=trend_cap, mode="lines+markers",
                     line=dict(color="#ff8a3d", width=4),
@@ -904,7 +905,7 @@ def overview_summary():
     largest = sites.loc[sites["capacity_mw"].idxmax()]
     status_counts = sites["status"].astype(str).value_counts()
     status_text = " · ".join(f"{n} {c}" for n, c in status_counts.items())
-    st.markdown(f'<div class="ov-panel"><div class="ov-tag">02 · 空间分布 · 风场布局</div><div class="ov-title">山东沿海风电项目布局 · 总体结果</div><div class="ov-grid">'
+    st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">02 · 空间分布 · 风场布局</div><div class="ov-title">山东沿海风电项目布局 · 总体结果</div><div class="ov-grid">'
                 f'<div class="ov-item"><div class="lbl">纳入公开项目</div><div class="val">{total_projects} <em>个</em></div><div class="note">GIS 地图支持悬浮查看与分类筛选</div></div>'
                 f'<div class="ov-item"><div class="lbl">项目规划/建设容量</div><div class="val">{total_capacity:,.0f} <em>MW</em></div><div class="note">不等同于已并网装机容量</div></div>'
                 f'<div class="ov-item"><div class="lbl">最大单体项目</div><div class="val">{largest["capacity_mw"]:,.0f} <em>MW</em></div><div class="note">{largest["name"]}</div></div>'
@@ -913,7 +914,7 @@ def overview_summary():
     # ---- 03 减碳效益 · 绿色价值（最终结果）----
     total_generation_gwh = total_capacity * 3000 / 1000
     total_carbon_wan = total_capacity * 3000 * 0.5306 / 10000
-    st.markdown(f'<div class="ov-panel"><div class="ov-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">海上风电年化绿色能源价值 · 模型测算</div><div class="ov-grid">'
+    st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">海上风电年化绿色能源价值 · 模型测算</div><div class="ov-grid">'
                 f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{total_generation_gwh:,.0f} <em>GWh</em></div><div class="note">项目容量 × 3,000 h/年等效利用小时</div></div>'
                 f'<div class="ov-item"><div class="lbl">年二氧化碳减排测算</div><div class="val">{total_carbon_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按 0.5306 kgCO₂/kWh 排放因子</div></div>'
                 f'<div class="ov-item"><div class="lbl">结果属性</div><div class="val">模型测算</div><div class="note">基于公开参数，不等同于现场监测值</div></div>'
