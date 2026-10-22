@@ -486,8 +486,8 @@ def temporal():
                                  marker=dict(size=16, color="#59e3c5", line=dict(color="rgba(226,255,247,.18)", width=1)),
                                  hovertemplate="%{x} 年<br/><b>%{y:g} 万千瓦</b><extra></extra>"))
         fig.update_xaxes(tickmode="array", tickvals=years, showgrid=False, zeroline=False, tickfont=dict(color="#a6c2d7", size=14.4), domain=[0.07,0.93])
-        fig.update_yaxes(gridcolor="rgba(180,218,239,.10)", zeroline=False, tickfont=dict(color="#a6c2d7", size=14.4),
-                         title=dict(text="万千瓦", font=dict(size=14.4)), range=[0, max(v for v in values if v is not None) * 1.3])
+        fig.update_yaxes(gridcolor="rgba(180,218,239,.10)", zeroline=False, tickfont=dict(color="#ffffff", size=14.4),
+                         title=dict(text="万千瓦", font=dict(color="#ffffff", size=14.4)), range=[0, max(v for v in values if v is not None) * 1.3])
         fig.update_layout(height=330, margin=dict(l=30, r=30, t=20, b=6),
                           paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
                           font=dict(family='"Microsoft YaHei", sans-serif', color="#e5f1fa", size=14.4),
