@@ -152,7 +152,7 @@ st.markdown(
     .panel-title { color:var(--ink); font-family:'Noto Serif SC',serif; font-size:1.15rem; font-weight:700; margin-bottom:.2rem; }
     .panel-note { color:var(--muted); font-size:.76rem; line-height:1.55; margin-bottom:.7rem; }
     .storyline { background:#0d2a4a; border-left:3px solid var(--cyan); padding:.8rem 1rem; color:#8fb0c0; line-height:1.7; font-size:.82rem; }
-    .source-box { background:rgba(13,42,74,.78); border:1px dashed #4a5c80; padding:.9rem 1rem; color:#6b8499; font-size:.80rem; line-height:1.7; }
+    .source-box { background:rgba(13,42,74,.78); border:1px dashed #4a5c80; padding:.9rem 1rem; color:#6b8499; font-size:.86rem; line-height:1.7; }
     div[data-testid="stSelectbox"] input[aria-label*="替代电力排放因子"] { color:#ff3b30 !important; }
     div[data-testid="stSelectbox"]:has(input[aria-label*="替代电力排放因子"]) [data-baseweb="select"] [class*="ValueContainer"] { color:#ff3b30 !important; }
     div[data-testid="stSelectbox"]:has(input[aria-label*="替代电力排放因子"]) [data-baseweb="select"] * { color:#ff3b30 !important; }
