@@ -490,7 +490,7 @@ def temporal():
                           paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
                           font=dict(family='"Microsoft YaHei", sans-serif', color="#e5f1fa", size=13),
                           showlegend=False)
-        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False, "doubleClick": False, "staticPlot": True})
         st.markdown('<div class="t2-scope"><strong>统计时点：</strong>2021 为 12 月 21 日首批示范项目全容量并网；2022 累计为新增 200 万千瓦后的推算值；2023—2025 累计并网截至当年 11 月底。各年口径与精度存在差异；累计数值由 MW 口径换算为万千瓦展示。</div>', unsafe_allow_html=True)
         with st.expander("查看统计口径与官方年度新增"):
             table = series[["year", "new_grid_capacity_mw", "cumulative_grid_capacity_mw", "data_status"]].rename(columns={
@@ -698,7 +698,7 @@ def render_carbon_status(frame, hours, factor, label, note, color):
 
 def carbon():
     st.markdown('<div class="section-title"><span class="sec-num">04</span> · 减碳效益 · 绿色价值核算</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-copy">基于项目装机规模、等效利用小时与公开电力排放因子，测算各项目年发电量和年二氧化碳减排量；按建设状态分步选择与测算，已并网为实际运行测算，在建/拟建为建成后理论测算。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-copy carbon-section-copy">基于项目装机规模、等效利用小时与公开电力排放因子，测算各项目年发电量和年二氧化碳减排量；按建设状态分步选择与测算，已并网为实际运行测算，在建/拟建为建成后理论测算。</div>', unsafe_allow_html=True)
 
     def step(n, text):
         st.markdown(
