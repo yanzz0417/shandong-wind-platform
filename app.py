@@ -480,7 +480,7 @@ def temporal():
                                  line=dict(color="#73b7db", width=2.5),
                                  marker=dict(size=8, color="#73b7db"),
                                  text=[f"{v:g}" if v is not None else "" for v in values],
-                                 textposition="top center", textfont=dict(size=12, color="#d1e9f7"), cliponaxis=False,
+                                 textposition="top center", textfont=dict(size=14.4, color="#d1e9f7"), cliponaxis=False,
                                  hovertemplate="%{x} 年 · %{y:g} 万千瓦<extra></extra>"))
         fig.add_trace(go.Scatter(x=[year], y=[cum_wan], mode="markers", name=f"所选 {year} 年",
                                  marker=dict(size=16, color="#59e3c5", line=dict(color="rgba(226,255,247,.18)", width=1)),
@@ -490,7 +490,7 @@ def temporal():
                          title="万千瓦", range=[0, max(v for v in values if v is not None) * 1.3])
         fig.update_layout(height=330, margin=dict(l=30, r=30, t=20, b=6),
                           paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-                          font=dict(family='"Microsoft YaHei", sans-serif', color="#e5f1fa", size=13),
+                          font=dict(family='"Microsoft YaHei", sans-serif', color="#e5f1fa", size=14.4),
                           showlegend=False)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False, "doubleClick": False, "staticPlot": True})
         st.markdown('<div class="t2-scope"><strong>统计时点：</strong>2021 为 12 月 21 日首批示范项目全容量并网；2022 累计为新增 200 万千瓦后的推算值；2023—2025 累计并网截至当年 11 月底。各年口径与精度存在差异；累计数值由 MW 口径换算为万千瓦展示。</div>', unsafe_allow_html=True)
