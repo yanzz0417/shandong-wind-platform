@@ -175,7 +175,7 @@ st.markdown(
     .footer { border-top:1px solid var(--line); margin-top:3rem; padding-top:1rem; color:#7e97ad; font:.68rem 'DM Mono',monospace; }
     .ov-panel { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:.5rem 1.1rem .95rem; margin:.9rem 0 1.5rem; }
     [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel):not(:has(.ov-panel)){ background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); border-radius:6px; padding:.4rem 1rem 1rem; margin:.9rem 0 1.5rem; }
-    .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { color:#e0bd6f; font:.66rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
+    .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { color:#e0bd6f; font-size:2.3rem; line-height:1.2; font-family:'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
     .ov-panel .ov-title, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-title { color:#ffffff; font-family:'Noto Serif SC',serif; font-size:1.3rem; font-weight:700; margin:.22rem 0 .55rem; }
     .ov-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
     .ov-item .lbl { color:#a9c2d8; font-size:.74rem; letter-spacing:.03em; }
@@ -427,7 +427,7 @@ def temporal_charts(series, highlight_year):
 
 def temporal():
     st.markdown('<div class="section-title"><span class="sec-num">02</span> · 时序发展 · 山东海上风电装机变化</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-copy" style="white-space:nowrap;font-size:.72rem;max-width:100%;">通过年份联动查看 2021—2025 年已公开并网数据，观察年度新增与累计并网规模。两类统计口径分开展示；缺失年份不插值，项目规划/建设容量不计入并网时序。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-copy" style="white-space:nowrap;font-size:.95rem;max-width:100%;">通过年份联动查看 2021—2025 年已公开并网数据，观察年度新增与累计并网规模。两类统计口径分开展示；缺失年份不插值，项目规划/建设容量不计入并网时序。</div>', unsafe_allow_html=True)
     series = temporal_series()
     with st.container(key="panel_controls2"):
         label_col, year_col = st.columns([1, 4.6], vertical_alignment="center")
