@@ -484,7 +484,7 @@ def temporal():
                                  fill="tozeroy", fillcolor="rgba(89,227,197,.055)",
                                  hovertemplate="%{x} 年 · %{y:g} 万千瓦<extra></extra>"))
         fig.add_trace(go.Scatter(x=[year], y=[cum_wan], mode="markers", name=f"所选 {year} 年",
-                                 marker=dict(size=16, color="#59e3c5", line=dict(color="#e2fff7", width=2)),
+                                 marker=dict(size=16, color="#59e3c5", line=dict(color="rgba(226,255,247,.18)", width=1)),
                                  hovertemplate="%{x} 年<br/><b>%{y:g} 万千瓦</b><extra></extra>"))
         fig.update_xaxes(tickmode="array", tickvals=years, showgrid=False, zeroline=False, tickfont_color="#a6c2d7", domain=[0.07,0.93])
         fig.update_yaxes(gridcolor="rgba(180,218,239,.10)", zeroline=False, tickfont_color="#a6c2d7",
