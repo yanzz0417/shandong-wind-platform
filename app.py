@@ -129,7 +129,7 @@ st.markdown(
     .section-kicker { color:var(--orange); margin:2.2rem 0 .5rem; }
     .section-title { font-family:'Noto Serif SC',serif; color:#e0b768; font-size:1.8rem; font-weight:700; margin:0 0 .85rem; }
     .section-copy { color:#c2d3df; line-height:1.8; max-width:800px; font-size:.95rem; }
-    .carbon-section-copy { white-space:nowrap; max-width:none; font-size:.72rem; }
+    .carbon-section-copy { white-space:nowrap; max-width:none; font-size:.90rem; }
     .metric-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:1.3rem 0 2rem; }
     .metric { background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--cyan); padding:1rem 1.15rem 1.1rem; min-height:105px; }
     .metric:nth-child(3) { border-top-color:var(--orange); }
