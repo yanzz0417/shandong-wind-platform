@@ -246,9 +246,9 @@ st.markdown(
     .t2-scope strong { color:#a5efde; font-weight:500; }
     .st-key-t2_scope_area summary span { font-size:.90rem !important; }
     .st-key-spatial_status_filter [data-testid="stWidgetLabel"] { font-size:.90rem !important; }
-    [data-testid="stSidebar"] [data-testid="stRadio"] [data-testid="stWidgetLabel"] { font-size:1.0rem !important; }
+    [data-testid="stSidebar"] [data-testid="stRadio"] [data-testid="stWidgetLabel"] { font-size:1.5rem !important; }
     [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label,
-    [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label p { font-size:1.0rem !important; white-space:nowrap !important; }
+    [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] label p { font-size:1.5rem !important; white-space:nowrap !important; }
     @media (max-width:640px) { .t2-overview { grid-template-columns:1fr; padding:13px; gap:10px; } .t2-metric { border-right:0; border-bottom:1px solid rgba(176,218,241,.22); padding:0 0 10px; } .st-key-panel_controls2 [data-testid="stHorizontalBlock"] { flex-direction:column; gap:5px; } .st-key-panel_controls2 [data-testid="stColumn"] { width:100%!important; flex:1 1 100%!important; min-width:0; } .t2-year-caption { display:none; } }
 
 
@@ -743,7 +743,7 @@ def carbon():
     with p2:
         factor_map = {0.5306: "全国平均 · 2023年", 0.6191: "山东省 · 2023年", 0.6361: "华北区域 · 2023年"}
         factor = st.selectbox("替代电力排放因子 / kgCO₂·kWh⁻¹", list(factor_map.keys()), format_func=lambda x: f"{x} · {factor_map[x]}", key="carbon_factor")
-        st.markdown('<div class="param-note">依据：电力排放因子取 2023 年公开电网排放因子（全国 0.5306 / 山东 0.6191 / 华北 0.6361 kgCO₂·kWh⁻¹），用于替代火电的减排测算。</div>', unsafe_allow_html=True)
+        st.markdown('<div class="param-note">依据：电力排放因子取 2023 年公开电网排放因子（全国 0.5306 / 山东 0.6191 / 华北 0.6361 kgCO₂·kWh⁻¹），用于替代火电的减排测算。<a href="https://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202512/t20251231_1139517.html" target="_blank" style="color:#ffffff;text-decoration:underline;">来源：生态环境部《关于发布2023年电力二氧化碳排放因子的公告》</a></div>', unsafe_allow_html=True)
 
     # 03 计算公式与测算口径
     step("03", "计算公式与测算口径")
