@@ -176,13 +176,13 @@ st.markdown(
     .ov-panel { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:.5rem 1.1rem .95rem; margin:.9rem 0 1.5rem; }
     [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel):not(:has(.ov-panel)){ background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); border-radius:6px; padding:.4rem 1rem 1rem; margin:.9rem 0 1.5rem; }
     .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { color:#e0bd6f; font:.66rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
-    .overview-section-tag { font-size:2.3rem !important; line-height:1.2; }
+    .overview-section-tag { font-size:1.4rem !important; line-height:1.2; }
     .ov-panel .ov-title, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-title { color:#ffffff; font-family:'Noto Serif SC',serif; font-size:1.3rem; font-weight:700; margin:.22rem 0 .55rem; }
     .ov-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    .ov-item .lbl { color:#a9c2d8; font-size:.74rem; letter-spacing:.03em; }
+    .ov-item .lbl { color:#a9c2d8; font-size:.90rem; letter-spacing:.03em; }
     .ov-item .val { color:#ffffff; font-size:1.62rem; font-weight:800; margin:.25rem 0 .15rem; }
-    .ov-item .val em { color:#e0b768; font-style:normal; font-size:.90rem; }
-    .ov-item .note { color:#9fb6cd; font-size:.68rem; line-height:1.5; }
+    .ov-item .val em { color:#e0b768; font-style:normal; }
+    .ov-item .note { color:#9fb6cd; font-size:.90rem; line-height:1.5; }
     .overview-time { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:1.15rem 1.25rem 1.25rem; margin:1rem 0 1.4rem; }
     .overview-time-head { display:flex; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:.6rem; }
     .overview-time-title { color:#fff; font-family:'Noto Serif SC',serif; font-size:1.28rem; font-weight:700; }
