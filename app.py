@@ -692,7 +692,7 @@ def render_carbon_status(frame, hours, factor, label, note, color):
         x=res2["carbon_t"] / 10000, y=res2["disp_name"], orientation="h",
         marker=dict(color=color, cornerradius=3),
         text=[f"{v:,.1f}" for v in red_vals], textposition="outside",
-        textfont=dict(size=10, color="#ffffff"), cliponaxis=False,
+        textfont=dict(size=12, color="#ffffff"), cliponaxis=False,
         hovertemplate="%{customdata[1]}<br>装机 %{customdata[0]:,.0f} MW<br>年减碳测算 %{x:,.1f} 万吨 CO₂<extra></extra>",
         customdata=res2[["capacity_mw", "name"]]))
     figr.update_layout(title=dict(text=f"{label} · 各项目年减碳测算（万吨 CO₂/年）", font=dict(color="#ffffff", size=13, family="Microsoft YaHei, sans-serif")), height=max(280, len(res2) * 30 + 50),
