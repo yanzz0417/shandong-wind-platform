@@ -650,7 +650,7 @@ def spatial():
                          "grid_date": "并网时间", "source": "官方来源", "position_note": "坐标说明"}),
         use_container_width=True, hide_index=True)
 
-    st.markdown('<div class="source-box"><b>数据口径</b> 地图展示山东沿海已并网及在建/拟建类公开项目；装机容量与建设状态均按官方公开口径标注，容量区分"已并网容量/规划建设容量"；点位为海域示意坐标，不代表精确场址边界；明细表附逐项官方来源链接。' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
+    st.markdown('<div class="source-box"><b>数据口径</b> 地图展示山东沿海已并网及在建/拟建类公开项目；装机容量与建设状态均按官方公开口径标注，容量区分"已并网容量/规划建设容量"；点位为海域示意坐标，不代表精确场址边界；明细表附逐项官方来源链接。<div class="source-links"><b>数据来源：</b><a href="http://nyj.shandong.gov.cn/" target="_blank" rel="noopener">山东省能源局</a><span> · </span><a href="http://fgw.shandong.gov.cn/" target="_blank" rel="noopener">山东省发展和改革委员会</a></div></div>', unsafe_allow_html=True)
 
 
 def estimate_carbon(frame, hours, factor):
