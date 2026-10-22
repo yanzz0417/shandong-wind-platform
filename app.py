@@ -286,6 +286,11 @@ st.markdown(
     .st-key-carbon_hours [data-testid="stSliderThumbValue"],
     .st-key-carbon_hours [data-testid="stSliderTickBarMin"],
     .st-key-carbon_hours [data-testid="stSliderTickBarMax"] { font-size:1.0rem !important; }
+    .st-key-carbon_hours [data-testid="stSlider"] > div:not([data-testid="stWidgetLabel"]) {
+      background: rgba(5,20,40,.6) !important;
+      border-radius: 16px !important;
+      padding: 12px 16px !important;
+    }
     [data-testid="stMetric"] { background: rgba(240,242,246,.15) !important; }
     .stSlider [data-baseweb="slider"] { background:rgba(5,20,40,.6); }
 
