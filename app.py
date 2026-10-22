@@ -26,7 +26,7 @@ SOURCE_LINKS_HTML = (
     '</div>'
 )
 
-st.set_page_config(page_title="风从海上来 | 山东海上风电交互平台", page_icon="🌊", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="海风变绿电 | 山东海上风电交互平台", page_icon="🌊", layout="wide", initial_sidebar_state="expanded")
 
 
 def sync_local_database():
