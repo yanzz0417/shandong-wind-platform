@@ -501,7 +501,6 @@ def temporal():
                     "year": "年份", "new_grid_capacity_mw": "年度新增并网 MW",
                     "cumulative_grid_capacity_mw": "累计并网 MW", "data_status": "公开统计口径"})
                 st.dataframe(table, use_container_width=True, hide_index=True)
-            st.markdown(f"**{year} 年口径**：{row['data_status'] or '官方公开口径'}。已公开的统计节点截至当年 11 月底；官方未公布或口径不连续的年份保留空缺，不进行插值。")
     st.markdown('<div class="source-box"><b>数据口径</b> 年度新增并网与累计并网分别统计；已公开的统计节点截至当年11月底。官方未公布或口径不连续的年份保留空缺，不进行插值；规划、核准和建设容量不纳入并网时序。' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
 
 
