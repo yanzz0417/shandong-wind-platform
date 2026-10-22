@@ -357,13 +357,6 @@ st.markdown(('<div class="topbar">'
     '<svg class="tb-dyn tb-net" viewBox="0 0 32 32" width="40" height="40"><g><circle cx="16" cy="16" r="10" fill="none" stroke="rgba(126,196,238,.95)" stroke-width="2"/><ellipse cx="16" cy="16" rx="10" ry="4.4" fill="none" stroke="rgba(126,196,238,.8)" stroke-width="1.6"/><line x1="16" y1="6" x2="16" y2="26" stroke="rgba(126,196,238,.8)" stroke-width="1.6"/><circle cx="16" cy="16" r="1.6" fill="#7ec4ee"/><animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="12s" repeatCount="indefinite"/></g></svg>'
     '<svg class="tb-dyn tb-sea" viewBox="0 0 300 8" width="100%" height="8" preserveAspectRatio="none" fill="none"><path class="wave-a" d="M0 5 Q25 2 50 5 T100 5 T150 5 T200 5 T250 5 T300 5" stroke="rgba(120,200,238,.5)" stroke-width="1.4"/><path class="wave-b" d="M0 7 Q30 4 60 7 T120 7 T180 7 T240 7 T300 7" stroke="rgba(120,200,238,.25)" stroke-width="1.2"/></svg>'
     '</div>'), unsafe_allow_html=True)
-top_spacer, top_refresh = st.columns([5.2, 1], gap="small")
-with top_refresh:
-    if st.button("↻ 重新生成界面", key="refresh_ui", use_container_width=True, help="清除数据缓存并重新运行当前 Streamlit 页面"):
-        st.cache_data.clear()
-        st.rerun()
-
-
 def year_navigator(prefix):
     """年份联动视图：点击年份即切换，联动当年指标与趋势高亮。"""
     current = int(st.session_state.get("year", 2024))
