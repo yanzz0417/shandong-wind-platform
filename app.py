@@ -992,4 +992,4 @@ def project_scale():
 
 
 {"发展总览": overview_summary, "时序发展": temporal, "空间分布": spatial, "减碳效益": carbon}[view]()
-st.markdown('<div class="footer">风从海上来 · 山东省海上风电交互式数据可视化平台 · 发展总览 / 时序发展 / 空间分布 / 减碳效益</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">海风变绿电 · 山东省海上风电交互式数据可视化平台 · 发展总览 / 时序发展 / 空间分布 / 减碳效益</div>', unsafe_allow_html=True)
