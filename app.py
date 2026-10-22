@@ -152,13 +152,13 @@ st.markdown(
     .panel-title { color:var(--ink); font-family:'Noto Serif SC',serif; font-size:1.15rem; font-weight:700; margin-bottom:.2rem; }
     .panel-note { color:var(--muted); font-size:.76rem; line-height:1.55; margin-bottom:.7rem; }
     .storyline { background:#0d2a4a; border-left:3px solid var(--cyan); padding:.8rem 1rem; color:#8fb0c0; line-height:1.7; font-size:.82rem; }
-    .source-box { background:rgba(13,42,74,.78); border:1px dashed #4a5c80; padding:.9rem 1rem; color:#6b8499; font-size:.86rem; line-height:1.7; }
+    .source-box { background:rgba(13,42,74,.78); border:1px dashed #4a5c80; padding:.9rem 1rem; color:#52d3c5; font-size:.90rem; line-height:1.7; }
     div[data-testid="stSelectbox"] input[aria-label*="替代电力排放因子"] { color:#ff3b30 !important; }
     div[data-testid="stSelectbox"]:has(input[aria-label*="替代电力排放因子"]) [data-baseweb="select"] [class*="ValueContainer"] { color:#ff3b30 !important; }
     div[data-testid="stSelectbox"]:has(input[aria-label*="替代电力排放因子"]) [data-baseweb="select"] * { color:#ff3b30 !important; }
-    .source-links { margin-top:.55rem; padding-top:.45rem; border-top:1px solid rgba(160,150,100,.24); color:#6b8499; }
-    .source-links a { color:#3d7db0 !important; text-decoration:underline; text-underline-offset:2px; font-weight:700; }
-    .source-links a:hover { color:#123d63 !important; }
+    .source-links { margin-top:.55rem; padding-top:.45rem; border-top:1px solid rgba(160,150,100,.24); color:#52d3c5; }
+    .source-links a { color:#7fe3c5 !important; text-decoration:underline; text-underline-offset:2px; font-weight:700; }
+    .source-links a:hover { color:#2d9e88 !important; }
     .metric-label,.metric-value,.metric-note,.panel-title,.panel-note,.story-card h4,.story-card p,.chain-step strong,.chain-step span { color:var(--ink); }
     .panel-note,.story-card p,.chain-step span { color:var(--muted); }
     .stButton > button { background:#123d63; color:#f2fbf9; border:1px solid #e0b768; border-radius:2px; font-weight:700; }
