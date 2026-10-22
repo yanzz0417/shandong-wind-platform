@@ -242,8 +242,9 @@ st.markdown(
     .t2-panel-title { display:flex; align-items:center; gap:10px; margin-bottom:4px; color:#eff9ff; font-size:16px; font-weight:650; }
     .t2-panel-title em { color:#59e3c5; font-style:normal; font-weight:500; font-size:11px; letter-spacing:1px; }
     .t2-panel-desc { color:#bed3e2; font-size:13px; line-height:1.7; margin:0 0 3px; }
-    .t2-scope { color:#d2e4ef; font-size:12px; line-height:1.8; margin-top:6px; }
+    .t2-scope { color:#d2e4ef; font-size:.90rem; line-height:1.8; margin-top:6px; }
     .t2-scope strong { color:#a5efde; font-weight:500; }
+    .st-key-t2_scope_expander [data-testid="stExpanderHeader"] { font-size:.90rem !important; }
     .st-key-spatial_status_filter [data-testid="stWidgetLabel"] { font-size:.90rem !important; }
     @media (max-width:640px) { .t2-overview { grid-template-columns:1fr; padding:13px; gap:10px; } .t2-metric { border-right:0; border-bottom:1px solid rgba(176,218,241,.22); padding:0 0 10px; } .st-key-panel_controls2 [data-testid="stHorizontalBlock"] { flex-direction:column; gap:5px; } .st-key-panel_controls2 [data-testid="stColumn"] { width:100%!important; flex:1 1 100%!important; min-width:0; } .t2-year-caption { display:none; } }
 
@@ -495,7 +496,7 @@ def temporal():
                           showlegend=False)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False, "scrollZoom": False, "doubleClick": False, "staticPlot": True})
         st.markdown('<div class="t2-scope"><strong>统计时点：</strong>2021 为 12 月 21 日首批示范项目全容量并网；2022 累计为新增 200 万千瓦后的推算值；2023—2025 累计并网截至当年 11 月底。各年口径与精度存在差异；累计数值由 MW 口径换算为万千瓦展示。</div>', unsafe_allow_html=True)
-        with st.expander("查看统计口径与官方年度新增"):
+        with st.expander("查看统计口径与官方年度新增", key="t2_scope_expander"):
             table = series[["year", "new_grid_capacity_mw", "cumulative_grid_capacity_mw", "data_status"]].rename(columns={
                 "year": "年份", "new_grid_capacity_mw": "年度新增并网 MW",
                 "cumulative_grid_capacity_mw": "累计并网 MW", "data_status": "公开统计口径"})
