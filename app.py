@@ -917,7 +917,7 @@ def overview_summary():
     st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">海上风电年化绿色能源价值 · 模型测算</div><div class="ov-grid">'
                 f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{total_generation_gwh:,.0f} <em>GWh</em></div><div class="note">项目容量 × 3,000 h/年等效利用小时</div></div>'
                 f'<div class="ov-item"><div class="lbl">年二氧化碳减排测算</div><div class="val">{total_carbon_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按 0.5306 kgCO₂/kWh 排放因子</div></div>'
-                f'<div class="ov-item"><div class="lbl">结果属性</div><div class="val">模型测算</div><div class="note">基于公开参数，不等同于现场监测值</div></div>'
+                f'<div class="ov-item"><div class="lbl">度电减排强度</div><div class="val">0.53 <em>kgCO₂/kWh</em></div><div class="note">单位上网电量碳减排强度，按电力排放因子 0.5306 kgCO₂/kWh 测算</div></div>'
                 f'</div></div>', unsafe_allow_html=True)
 
     st.markdown('<div class="source-box"><b>数据说明</b> 时序为山东省累计并网口径（2021 年首批并网实现零突破）；项目容量与状态依据山东省公开项目资料整理；减碳结果按 3,000 h/年等效利用小时与 0.5306 kgCO₂/kWh 排放因子模型测算，不等同于现场监测值。' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
