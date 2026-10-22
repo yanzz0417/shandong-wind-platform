@@ -127,7 +127,7 @@ st.markdown(
     .top-status { display:inline-flex; align-items:center; gap:.35rem; padding:.3rem .55rem; border:1px solid #3a4a72; color:#e3cd8f; }
     .top-status i { width:6px; height:6px; border-radius:50%; background:#e0b768; display:inline-block; }
     .section-kicker { color:var(--orange); margin:2.2rem 0 .5rem; }
-    .section-title { font-family:'Noto Serif SC',serif; color:#e0b768; font-size:1.8rem; font-weight:700; margin:1.8rem 0 1.6rem; }
+    .section-title { font-family:'Noto Serif SC',serif; color:#e0b768; font-size:1.8rem; font-weight:700; margin:1.8rem 0 .9rem; }
     .section-copy { color:#c2d3df; line-height:1.8; max-width:800px; font-size:.95rem; }
     .carbon-section-copy { white-space:nowrap; max-width:none; font-size:.90rem; }
     .metric-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:1.3rem 0 2rem; }
