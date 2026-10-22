@@ -766,7 +766,7 @@ def carbon():
     frame = sites[sites["status"] == status_key] if "status" in sites else sites
     render_carbon_status(frame, hours, factor, status_key, note, color)
 
-    st.markdown('<div class="source-box"><b>数据口径</b> 年发电量 = 装机规模 × 等效利用小时；年减碳量 = 年发电量 × 电力排放因子，为替代电力的毛减排估算，未扣除建设、运维与退役排放。已并网项目为在运实际测算；在建/拟建项目按建成后容量作理论测算，不代表现场监测值。各状态分别合计、不合并为总数。' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
+    st.markdown('<div class="source-box"><b>数据口径</b> 年发电量 = 装机规模 × 等效利用小时；年减碳量 = 年发电量 × 电力排放因子，为替代电力的毛减排估算，未扣除建设、运维与退役排放。已并网项目为在运实际测算；在建/拟建项目按建成后容量作理论测算，不代表现场监测值。各状态分别合计、不合并为总数。<div class="source-links"><b>数据来源：</b><a href="http://www.shandong.gov.cn/art/2025/11/29/art_97560_695367.html" target="_blank" rel="noopener">山东省人民政府：海上风电年减排CO₂可取代14000万棵大树固碳量（2025-11）</a><span> · </span><a href="http://fgw.shandong.gov.cn/art/2025/12/2/art_91502_10479884.html" target="_blank" rel="noopener">省发改委：单台机组年减排8万吨CO₂（2025-12）</a></div></div>', unsafe_allow_html=True)
 
 
 def overview_page_new():
