@@ -479,7 +479,7 @@ def temporal():
                                  line=dict(color="#73b7db", width=2.5),
                                  marker=dict(size=8, color="#73b7db"),
                                  text=[f"{v:g}" if v is not None else "" for v in values],
-                                 textposition="top center", textfont=dict(size=12, color="#d1e9f7"),
+                                 textposition="top center", textfont=dict(size=12, color="#d1e9f7"), cliponaxis=False,
                                  fill="tozeroy", fillcolor="rgba(89,227,197,.055)",
                                  hovertemplate="%{x} 年 · %{y:g} 万千瓦<extra></extra>"))
         fig.add_trace(go.Scatter(x=[year], y=[cum_wan], mode="markers", name=f"所选 {year} 年",
@@ -488,7 +488,7 @@ def temporal():
         fig.update_xaxes(tickmode="array", tickvals=years, showgrid=False, zeroline=False, tickfont_color="#a6c2d7")
         fig.update_yaxes(gridcolor="rgba(180,218,239,.10)", zeroline=False, tickfont_color="#a6c2d7",
                          title="万千瓦", range=[0, max(v for v in values if v is not None) * 1.3])
-        fig.update_layout(height=330, margin=dict(l=6, r=18, t=20, b=6),
+        fig.update_layout(height=330, margin=dict(l=6, r=55, t=20, b=6),
                           paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
                           font=dict(family='"Microsoft YaHei", sans-serif', color="#e5f1fa", size=13),
                           showlegend=False)
