@@ -108,9 +108,9 @@ st.markdown(
     .mono { font:500 .68rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
     .eyebrow { color:var(--cyan); margin-bottom:.8rem; }
     .topbar { position:relative; overflow:hidden; display:flex; justify-content:center; align-items:center; background:transparent; color:#ffffff; padding:.7rem 1rem; margin:-.3rem 0 1.4rem; min-height:70px; }
-    .topbrand { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:.7rem; }
+    .topbrand { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:.7rem; padding-top:12px; }
     .brand-mark { width:48px; height:48px; display:grid; place-items:center; }
-    .topbrand strong { display:block; font-size:2.8rem; letter-spacing:.02em; line-height:1.3; white-space:nowrap; font-family:'Noto Serif SC',serif; font-weight:700; text-align:center; background:linear-gradient(180deg,#f6fffa 0%,#c2ffdb 32%,#6ee79a 60%,#eafff4 100%); -webkit-background-clip:text; background-clip:text; color:transparent; text-shadow:0 2px 10px rgba(20,140,80,.42), 0 0 26px rgba(130,255,190,.32); }
+    .topbrand strong { display:block; font-size:2.8rem; letter-spacing:.02em; line-height:1.3; white-space:nowrap; font-family:'Noto Serif SC',serif; font-weight:700; text-align:center; background:none; -webkit-background-clip:initial; background-clip:initial; color:#ffffff; text-shadow:0 2px 8px rgba(8,48,92,.5), 0 0 22px rgba(255,255,255,.28); }
     .topbrand span { display:block; color:#d6e6f4; font-size:.8rem; margin-top:.22rem; text-align:center; letter-spacing:.12em; text-shadow:0 1px 4px rgba(0,18,36,.7); }
     .top-actions { position:relative; z-index:1; display:flex; align-items:center; gap:1rem; color:#9ab0c8; font-size:.72rem; }
     .tb-dyn { position:absolute; pointer-events:none; z-index:0; }
