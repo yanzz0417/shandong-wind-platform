@@ -127,7 +127,7 @@ st.markdown(
     .top-status { display:inline-flex; align-items:center; gap:.35rem; padding:.3rem .55rem; border:1px solid #3a4a72; color:#e3cd8f; }
     .top-status i { width:6px; height:6px; border-radius:50%; background:#e0b768; display:inline-block; }
     .section-kicker { color:var(--orange); margin:2.2rem 0 .5rem; }
-    .section-title { font-family:'Noto Serif SC',serif; color:#eef4fa; font-size:1.8rem; font-weight:700; margin:0 0 .85rem; }
+    .section-title { font-family:'Noto Serif SC',serif; color:#e0b768; font-size:1.8rem; font-weight:700; margin:0 0 .85rem; }
     .section-copy { color:#c2d3df; line-height:1.8; max-width:800px; font-size:.95rem; }
     .metric-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:1.3rem 0 2rem; }
     .metric { background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--cyan); padding:1rem 1.15rem 1.1rem; min-height:105px; }
@@ -426,7 +426,7 @@ def temporal_charts(series, highlight_year):
 
 
 def temporal():
-    st.markdown('<div class="section-title">时序发展 · 山东海上风电装机变化</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title"><span class="sec-num">02</span> · 时序发展 · 山东海上风电装机变化</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-copy">通过年份联动查看 2021—2025 年已公开并网数据，观察年度新增与累计并网规模。两类统计口径分开展示；缺失年份不插值，项目规划/建设容量不计入并网时序。</div>', unsafe_allow_html=True)
     series = temporal_series()
     with st.container(key="panel_controls2"):
@@ -530,7 +530,7 @@ def project_timeline_legacy():
 
 
 def spatial():
-    st.markdown('<div class="section-title">空间分布 · 风电场布局</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title"><span class="sec-num">03</span> · 空间分布 · 风电场布局</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-copy">依托 GIS 地图标注山东沿海风电项目的名称、位置、装机规模与建设状态；支持悬浮查看项目详情，并可按建设状态分类筛选。</div>', unsafe_allow_html=True)
 
     # ---- 严谨逻辑：筛选 + 实时统计（防空筛选） ----
@@ -693,7 +693,7 @@ def render_carbon_status(frame, hours, factor, label, note, color):
 
 
 def carbon():
-    st.markdown('<div class="section-title">减碳效益 · 绿色价值核算</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title"><span class="sec-num">04</span> · 减碳效益 · 绿色价值核算</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-copy">基于项目装机规模、等效利用小时与公开电力排放因子，测算各项目年发电量和年二氧化碳减排量；按建设状态分步选择与测算，已并网为实际运行测算，在建/拟建为建成后理论测算。</div>', unsafe_allow_html=True)
 
     def step(n, text):
@@ -866,7 +866,7 @@ def overview_page():
 
 def overview_summary():
     """发展总览：时序 / 空间 / 减碳 三项核心结果的最终结论，不展开过程交互。"""
-    st.markdown('<div class="section-title">发展总览 · 山东海上风电</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title"><span class="sec-num">01</span> · 发展总览 · 山东海上风电</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-copy" style="white-space:nowrap;max-width:100%;">按“时序发展—空间分布—减碳效益”汇总山东海上风电公开数据与模型测算的最终结果；完整交互图表与项目地图见左侧对应模块。</div>', unsafe_allow_html=True)
 
     # ---- 01 时序发展 · 装机规模趋势（最终结果）----
