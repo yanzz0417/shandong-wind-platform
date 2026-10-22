@@ -245,6 +245,7 @@ st.markdown(
     .t2-scope { color:#d2e4ef; font-size:12px; line-height:1.8; margin-top:6px; }
     .t2-scope strong { color:#a5efde; font-weight:500; }
     .st-key-spatial_status_filter [data-testid="stWidgetLabel"] { font-size:.90rem !important; }
+    .st-key-panel_tline2 .plot-container, .st-key-panel_tline2 .js-plotly-plot { outline:1px solid rgba(176,218,241,.10) !important; }
     @media (max-width:640px) { .t2-overview { grid-template-columns:1fr; padding:13px; gap:10px; } .t2-metric { border-right:0; border-bottom:1px solid rgba(176,218,241,.22); padding:0 0 10px; } .st-key-panel_controls2 [data-testid="stHorizontalBlock"] { flex-direction:column; gap:5px; } .st-key-panel_controls2 [data-testid="stColumn"] { width:100%!important; flex:1 1 100%!important; min-width:0; } .t2-year-caption { display:none; } }
 
 
