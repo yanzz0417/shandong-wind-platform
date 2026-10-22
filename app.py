@@ -715,8 +715,8 @@ def carbon():
     step("02", "设置测算参数")
     p1, p2 = st.columns(2, gap="large")
     with p1:
-        hours = st.slider("年等效利用小时数 / h", 1000, 8760, 3000, 100, key="carbon_hours")
-        st.markdown('<div class="param-note"><a href="https://plan.hainan.gov.cn/sfgw/0400/202511/9f6fee91fcf24adba8dffe73a8affc42.shtml?ddtab=true" target="_blank" rel="noopener" style="color:#4d9ef7;text-decoration:underline;">依据：海上风电年等效利用小时常取 3,000 h 作为测算基准，可按项目实际运行情况调整。</a></div>', unsafe_allow_html=True)
+        hours = st.slider("年等效利用小时数 / h", 1000, 8760, 2860, 100, key="carbon_hours")
+        st.markdown('<div class="param-note"><a href="http://fgw.shandong.gov.cn/art/2025/12/22/art_91687_10480950.html" target="_blank" rel="noopener" style="color:#4d9ef7;text-decoration:underline;">依据：海上风电年等效利用小时常取 2,860 h 作为测算基准，可按项目实际运行情况调整。</a></div>', unsafe_allow_html=True)
     with p2:
         factor_map = {0.5306: "全国平均 · 2023年", 0.6191: "山东省 · 2023年", 0.6361: "华北区域 · 2023年"}
         factor = st.selectbox("替代电力排放因子 / kgCO₂·kWh⁻¹", list(factor_map.keys()), format_func=lambda x: f"{x} · {factor_map[x]}", key="carbon_factor")
@@ -780,12 +780,12 @@ def overview_page_new():
 
     total_mw = float(sites["capacity_mw"].sum())
     total_gwh = float(sites["annual_gwh"].sum())
-    carbon_wan = total_mw * 3000 * 0.5306 / 10000
+    carbon_wan = total_mw * 2860 * 0.5306 / 10000
     ws_mean = sites["wind_speed"].mean()
     ws_text = f"{ws_mean:.1f}" if pd.notna(ws_mean) else "—"
     gwh_text = f"{total_gwh:,.0f}" if total_gwh else "—"
-    st.markdown(f'<div class="overview-summary-grid"><div class="overview-summary"><div class="tag">03 · 空间布局结果</div><h3>项目规模与海域布局</h3><div class="stats"><div><b>{len(sites)}</b><span>收录风场</span></div><div><b>{total_mw:,.0f}</b><span>项目合计装机 / MW</span></div><div><b>{ws_text}</b><span>平均风速 / m/s</span></div></div></div><div class="overview-summary"><div class="tag">04 · 减碳效益结果</div><h3>年化绿色能源价值</h3><div class="stats"><div><b>{gwh_text}</b><span>项目年发电 / GWh</span></div><div><b>{carbon_wan:,.1f}</b><span>模型减排 / 万吨</span></div><div><b>3,000</b><span>等效利用小时 / 年</span></div></div></div></div>', unsafe_allow_html=True)
-    st.markdown('<div class="source-box"><b>数据口径</b> 装机与发电时序使用已处理的年度数据；2025 年暂未收录，不进行插值。减碳结果按 3,000 h/年等效利用小时与 0.5306 kgCO₂/kWh 排放因子进行模型测算。</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="overview-summary-grid"><div class="overview-summary"><div class="tag">03 · 空间布局结果</div><h3>项目规模与海域布局</h3><div class="stats"><div><b>{len(sites)}</b><span>收录风场</span></div><div><b>{total_mw:,.0f}</b><span>项目合计装机 / MW</span></div><div><b>{ws_text}</b><span>平均风速 / m/s</span></div></div></div><div class="overview-summary"><div class="tag">04 · 减碳效益结果</div><h3>年化绿色能源价值</h3><div class="stats"><div><b>{gwh_text}</b><span>项目年发电 / GWh</span></div><div><b>{carbon_wan:,.1f}</b><span>模型减排 / 万吨</span></div><div><b>2,860</b><span>等效利用小时 / 年</span></div></div></div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="source-box"><b>数据口径</b> 装机与发电时序使用已处理的年度数据；2025 年暂未收录，不进行插值。减碳结果按 2,860 h/年等效利用小时与 0.5306 kgCO₂/kWh 排放因子进行模型测算。</div>', unsafe_allow_html=True)
 
 
 def overview_page_legacy():
@@ -795,8 +795,8 @@ def overview_page_legacy():
     last_cap = float(latest.capacity_mw.iloc[-1]); last_year = int(latest.year.iloc[-1])
     first_cap = float(latest.capacity_mw.iloc[0])
     total_mw = float(sites["capacity_mw"].sum())
-    gen_gwh = total_mw * 3000.0 / 1000.0
-    carb_wan = total_mw * 3000.0 * 0.5306 / 10000.0
+    gen_gwh = total_mw * 2860.0 / 1000.0
+    carb_wan = total_mw * 2860.0 * 0.5306 / 10000.0
     n_run = int((sites["status"] == "运行").sum()); n_demo = int((sites["status"] == "示范").sum()); n_build = int((sites["status"] == "建设").sum())
 
     st.markdown(
@@ -821,9 +821,9 @@ def overview_page_legacy():
         f'<div class="ov-panel"><div class="ov-tag" style="color:#7fd18f">03 · 减碳效益 · 绿色价值</div>'
         f'<div class="ov-title">减碳效益总体结果</div>'
         f'<div class="ov-grid">'
-        f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 3,000 h/年等效利用小时</div></div>'
+        f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 2,860 h/年等效利用小时</div></div>'
         f'<div class="ov-item"><div class="lbl">年减碳潜力测算</div><div class="val">{carb_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">年发电量 × 0.5306 kgCO₂/kWh 排放因子</div></div>'
-        f'<div class="ov-item"><div class="lbl">测算口径</div><div class="val">3,000 h<em> /年</em></div><div class="note">等效利用小时 × 电力排放因子</div></div>'
+        f'<div class="ov-item"><div class="lbl">测算口径</div><div class="val">2,860 h<em> /年</em></div><div class="note">等效利用小时 × 电力排放因子</div></div>'
         f'</div></div>', unsafe_allow_html=True)
 
     st.markdown('<div class="source-box"><b>数据来源</b> 山东省海上风电装机时序依据公开并网口径整理；规划项目容量、项目布局与状态依据山东省公开项目资料整理；减碳结果为模型测算，不等同于现场监测值。' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
@@ -858,13 +858,13 @@ def overview_page():
         st.markdown('<div style="color:#bcd7d2;font-size:.78rem;line-height:1.7;margin-top:.6rem;padding-top:.7rem;border-top:1px dashed rgba(196,168,92,.3)"><b style="color:#ffffff">官方数据说明</b> 各风电场规划/建设容量与项目状态依据山东省政府、发展改革部门和能源主管部门公开资料整理；柱高表示规划/建设容量，颜色区分项目状态。</div>', unsafe_allow_html=True)
 
     total_mw = float(sites["capacity_mw"].sum())
-    gen_gwh = total_mw * 3000.0 / 1000.0
-    carb_wan = total_mw * 3000.0 * 0.5306 / 10000.0
+    gen_gwh = total_mw * 2860.0 / 1000.0
+    carb_wan = total_mw * 2860.0 * 0.5306 / 10000.0
     n_run = int(sites["status"].astype(str).str.contains("运行").sum())
     n_demo = int(sites["status"].astype(str).str.contains("示范").sum())
     n_build = int(sites["status"].astype(str).str.contains("建设").sum())
     st.markdown(f'<div class="ov-panel"><div class="ov-tag">02 · 空间分布 · 风场布局</div><div class="ov-title">空间布局总体结果</div><div class="ov-grid"><div class="ov-item"><div class="lbl">收录风电场</div><div class="val">{len(sites)} <em>个</em></div><div class="note">有名称与规模依据的项目子集</div></div><div class="ov-item"><div class="lbl">合计装机规模</div><div class="val">{total_mw:,.0f} <em>MW</em></div><div class="note">覆盖多个海域</div></div><div class="ov-item"><div class="lbl">建设状态</div><div class="val">{n_run}<em>运行</em> · {n_demo}<em>示范</em> · {n_build}<em>建设</em></div><div class="note">按项目状态分类</div></div></div></div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="ov-panel"><div class="ov-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">减碳效益总体结果</div><div class="ov-grid"><div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 3,000 h/年</div></div><div class="ov-item"><div class="lbl">年减碳潜力测算</div><div class="val">{carb_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按电力排放因子测算</div></div><div class="ov-item"><div class="lbl">测算口径</div><div class="val">3,000 h<em> /年</em></div><div class="note">等效利用小时 × 排放因子</div></div></div></div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="ov-panel"><div class="ov-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">减碳效益总体结果</div><div class="ov-grid"><div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 2,860 h/年</div></div><div class="ov-item"><div class="lbl">年减碳潜力测算</div><div class="val">{carb_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按电力排放因子测算</div></div><div class="ov-item"><div class="lbl">测算口径</div><div class="val">2,860 h<em> /年</em></div><div class="note">等效利用小时 × 排放因子</div></div></div></div>', unsafe_allow_html=True)
     st.markdown('<div class="source-box"><b>数据来源</b> 项目布局、规模与减碳核算依据山东省政府、发展改革部门和能源主管部门公开资料整理；减碳结果为模型测算值。</div>', unsafe_allow_html=True)
 
 
@@ -915,15 +915,15 @@ def overview_summary():
                 f'</div><div style="color:#9fb6cd;font-size:.90rem;margin-top:.5rem;">状态结构：{status_text}；项目坐标为海域示意点，详细 GIS 地图见空间分布页。</div></div>', unsafe_allow_html=True)
 
     # ---- 03 减碳效益 · 绿色价值（最终结果）----
-    total_generation_gwh = total_capacity * 3000 / 1000
-    total_carbon_wan = total_capacity * 3000 * 0.5306 / 10000
+    total_generation_gwh = total_capacity * 2860 / 1000
+    total_carbon_wan = total_capacity * 2860 * 0.5306 / 10000
     st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">海上风电年化绿色能源价值 · 模型测算</div><div class="ov-grid">'
-                f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{total_generation_gwh:,.0f} <em>GWh</em></div><div class="note">项目容量 × 3,000 h/年等效利用小时</div></div>'
+                f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{total_generation_gwh:,.0f} <em>GWh</em></div><div class="note">项目容量 × 2,860 h/年等效利用小时</div></div>'
                 f'<div class="ov-item"><div class="lbl">年二氧化碳减排测算</div><div class="val">{total_carbon_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按 0.5306 kgCO₂/kWh 排放因子</div></div>'
                 f'<div class="ov-item"><div class="lbl">度电减排强度</div><div class="val">0.53 <em>kgCO₂/kWh</em></div><div class="note">单位上网电量碳减排强度，按电力排放因子 0.5306 kgCO₂/kWh 测算</div></div>'
                 f'</div></div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="source-box"><b>数据说明</b> 时序为山东省累计并网口径（2021 年首批并网实现零突破）；项目容量与状态依据山东省公开项目资料整理；减碳结果按 3,000 h/年等效利用小时与 0.5306 kgCO₂/kWh 排放因子模型测算，不等同于现场监测值。' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
+    st.markdown('<div class="source-box"><b>数据说明</b> 时序为山东省累计并网口径（2021 年首批并网实现零突破）；项目容量与状态依据山东省公开项目资料整理；减碳结果按 2,860 h/年等效利用小时与 0.5306 kgCO₂/kWh 排放因子模型测算，不等同于现场监测值。' + SOURCE_LINKS_HTML + '</div>', unsafe_allow_html=True)
 
 
 
