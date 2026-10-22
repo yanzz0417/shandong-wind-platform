@@ -59,7 +59,7 @@ def page_background_style(asset):
     mime = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".webp": "image/webp"}[asset.suffix.lower()]
     encoded = base64.b64encode(asset.read_bytes()).decode("ascii")
     return (
-        "background-image:linear-gradient(rgba(2,14,26,.48),rgba(2,14,26,.48)),"
+        "background-image:linear-gradient(rgba(2,14,26,.58),rgba(2,14,26,.58)),"
         f"url(data:{mime};base64,{encoded});"
         "background-size:cover;background-position:center;background-attachment:fixed;"
         "background-repeat:no-repeat;"
