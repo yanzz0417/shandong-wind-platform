@@ -213,7 +213,7 @@ st.markdown(
     @media (max-width:900px) { .carbon-section-copy { white-space:normal; } }
 
     /* ===== 图二·时序页样式（合并自「时序发展分析」原型）===== */
-    .st-key-panel_controls2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-bottom:none; border-radius:14px 14px 0 0; padding:9px 15px; margin:12px 0 0; }
+    .st-key-panel_controls2 { background:rgba(6,22,44,.58); border:1px solid rgba(176,218,241,.22); border-bottom:none; border-radius:14px 14px 0 0; padding:9px 15px; margin:12px 0 -16px; }
     .st-key-panel_controls2 [role="radiogroup"] { display:flex; gap:8px; flex-wrap:nowrap; }
     .st-key-panel_controls2 label[data-baseweb="radio"] { flex:1; min-width:65px; margin:0; justify-content:center; padding:6px 11px; border:1px solid rgba(176,218,241,.3); border-radius:8px; background:rgba(10,43,62,.8); cursor:pointer; transition:background .2s,border-color .2s; }
     .st-key-panel_controls2 label[data-baseweb="radio"] p { font-size:14px; color:#d6e4ef; }
@@ -537,7 +537,7 @@ def project_timeline_legacy():
 
 def spatial():
     st.markdown('<div class="section-title"><span class="sec-num">03</span> · 空间分布 · 风电场布局</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-copy" style="white-space:nowrap;max-width:100%;">依托 GIS 地图标注山东沿海风电项目的名称、位置、装机规模与建设状态；支持悬浮查看项目详情，并可按建设状态分类筛选。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-copy" style="white-space:nowrap;max-width:100%;font-size:.90rem;">依托 GIS 地图标注山东沿海风电项目的名称、位置、装机规模与建设状态；支持悬浮查看项目详情，并可按建设状态分类筛选。</div>', unsafe_allow_html=True)
 
     # ---- 严谨逻辑：筛选 + 实时统计（防空筛选） ----
     status_opts = sites["status"].unique().tolist()
