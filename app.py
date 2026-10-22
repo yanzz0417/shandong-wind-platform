@@ -176,7 +176,7 @@ st.markdown(
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color:#a9bfd4 !important; }
     [data-testid="stSidebar"] input + div, [data-testid="stSidebar"] [role="radiogroup"] label p { color:#e3eef4 !important; }
     [data-testid="stSidebar"] [data-testid="stExpander"] summary { color:#e3eef4 !important; }
-    .footer { border-top:1px solid var(--line); margin-top:3rem; padding-top:1rem; color:#ff8c42; font-size:.90rem; font-family:'DM Mono',monospace; }
+    .footer { border-top:1px solid var(--line); margin-top:3rem; padding-top:1rem; color:#ffffff; font-size:.90rem; font-family:'DM Mono',monospace; }
     .ov-panel { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:.5rem 1.1rem .95rem; margin:.9rem 0 1.5rem; }
     [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel):not(:has(.ov-panel)){ background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); border-radius:6px; padding:.4rem 1rem 1rem; margin:.9rem 0 1.5rem; }
     .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { display:flex; align-items:center; gap:.5rem; color:#a9c2d8; font-family:'Microsoft YaHei',sans-serif; font-size:.95rem; font-weight:600; letter-spacing:.06em; }
