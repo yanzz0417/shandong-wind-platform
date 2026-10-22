@@ -443,7 +443,7 @@ def temporal_charts(series, highlight_year):
 
 def temporal():
     st.markdown('<div class="section-title"><span class="sec-num">02</span> · 时序发展 · 山东海上风电装机变化</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-copy" style="white-space:nowrap;font-size:.95rem;max-width:100%;">通过年份联动查看 2021—2025 年已公开并网数据，观察年度新增与累计并网规模。两类统计口径分开展示；缺失年份不插值，项目规划/建设容量不计入并网时序。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-copy" style="white-space:nowrap;font-size:1.2rem;max-width:100%;">通过年份联动查看 2021—2025 年已公开并网数据，观察年度新增与累计并网规模。两类统计口径分开展示；缺失年份不插值，项目规划/建设容量不计入并网时序。</div>', unsafe_allow_html=True)
     series = temporal_series()
     with st.container(key="panel_controls2"):
         label_col, year_col = st.columns([1, 4.6], vertical_alignment="center")
@@ -881,7 +881,7 @@ def overview_page():
 def overview_summary():
     """发展总览：时序 / 空间 / 减碳 三项核心结果的最终结论，不展开过程交互。"""
     st.markdown('<div class="section-title"><span class="sec-num">01</span> · 发展总览 · 山东海上风电</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-copy" style="white-space:nowrap;max-width:100%;">按“时序发展—空间分布—减碳效益”汇总山东海上风电公开数据与模型测算的最终结果；完整交互图表与项目地图见左侧对应模块。</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-copy" style="white-space:nowrap;max-width:100%;font-size:1.2rem;">按“时序发展—空间分布—减碳效益”汇总山东海上风电公开数据与模型测算的最终结果；完整交互图表与项目地图见左侧对应模块。</div>', unsafe_allow_html=True)
 
     # ---- 01 时序发展 · 装机规模趋势（最终结果）----
     trend_years = [2021, 2022, 2023, 2024, 2025]
