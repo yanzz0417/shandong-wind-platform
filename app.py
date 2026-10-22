@@ -815,7 +815,7 @@ def overview_page_legacy():
     n_run = int((sites["status"] == "运行").sum()); n_demo = int((sites["status"] == "示范").sum()); n_build = int((sites["status"] == "建设").sum())
 
     st.markdown(
-        f'<div class="ov-panel"><div class="ov-tag" style="color:#52d3c5">01 · 时序发展 · 装机规模</div>'
+        f'<div class="ov-panel"><div class="ov-tag" style="color:#52d3c5">时序发展 · 装机规模</div>'
         f'<div class="ov-title">装机时序总体结果</div>'
         f'<div class="ov-grid">'
         f'<div class="ov-item"><div class="lbl">已收录装机（{last_year} 年）</div><div class="val">{last_cap:,.0f} <em>MW</em></div><div class="note">官方最新已收录年份</div></div>'
@@ -824,7 +824,7 @@ def overview_page_legacy():
         f'</div></div>', unsafe_allow_html=True)
 
     st.markdown(
-        f'<div class="ov-panel"><div class="ov-tag" style="color:#f0b56a">02 · 空间分布 · 风场布局</div>'
+        f'<div class="ov-panel"><div class="ov-tag" style="color:#f0b56a">空间分布 · 风场布局</div>'
         f'<div class="ov-title">空间布局总体结果</div>'
         f'<div class="ov-grid">'
         f'<div class="ov-item"><div class="lbl">收录风电场</div><div class="val">{len(sites)} <em>个</em></div><div class="note">有名称与规模依据的项目子集</div></div>'
@@ -833,7 +833,7 @@ def overview_page_legacy():
         f'</div></div>', unsafe_allow_html=True)
 
     st.markdown(
-        f'<div class="ov-panel"><div class="ov-tag" style="color:#7fd18f">03 · 减碳效益 · 绿色价值</div>'
+        f'<div class="ov-panel"><div class="ov-tag" style="color:#7fd18f">减碳效益 · 绿色价值</div>'
         f'<div class="ov-title">减碳效益总体结果</div>'
         f'<div class="ov-grid">'
         f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 2,860 h/年等效利用小时</div></div>'
@@ -878,8 +878,8 @@ def overview_page():
     n_run = int(sites["status"].astype(str).str.contains("运行").sum())
     n_demo = int(sites["status"].astype(str).str.contains("示范").sum())
     n_build = int(sites["status"].astype(str).str.contains("建设").sum())
-    st.markdown(f'<div class="ov-panel"><div class="ov-tag">02 · 空间分布 · 风场布局</div><div class="ov-title">空间布局总体结果</div><div class="ov-grid"><div class="ov-item"><div class="lbl">收录风电场</div><div class="val">{len(sites)} <em>个</em></div><div class="note">有名称与规模依据的项目子集</div></div><div class="ov-item"><div class="lbl">合计装机规模</div><div class="val">{total_mw:,.0f} <em>MW</em></div><div class="note">覆盖多个海域</div></div><div class="ov-item"><div class="lbl">建设状态</div><div class="val">{n_run}<em>运行</em> · {n_demo}<em>示范</em> · {n_build}<em>建设</em></div><div class="note">按项目状态分类</div></div></div></div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="ov-panel"><div class="ov-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">减碳效益总体结果</div><div class="ov-grid"><div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 2,860 h/年</div></div><div class="ov-item"><div class="lbl">年减碳潜力测算</div><div class="val">{carb_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按电力排放因子测算</div></div><div class="ov-item"><div class="lbl">测算口径</div><div class="val">2,860 h<em> /年</em></div><div class="note">等效利用小时 × 排放因子</div></div></div></div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="ov-panel"><div class="ov-tag">空间分布 · 风场布局</div><div class="ov-title">空间布局总体结果</div><div class="ov-grid"><div class="ov-item"><div class="lbl">收录风电场</div><div class="val">{len(sites)} <em>个</em></div><div class="note">有名称与规模依据的项目子集</div></div><div class="ov-item"><div class="lbl">合计装机规模</div><div class="val">{total_mw:,.0f} <em>MW</em></div><div class="note">覆盖多个海域</div></div><div class="ov-item"><div class="lbl">建设状态</div><div class="val">{n_run}<em>运行</em> · {n_demo}<em>示范</em> · {n_build}<em>建设</em></div><div class="note">按项目状态分类</div></div></div></div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="ov-panel"><div class="ov-tag">减碳效益 · 绿色价值</div><div class="ov-title">减碳效益总体结果</div><div class="ov-grid"><div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 2,860 h/年</div></div><div class="ov-item"><div class="lbl">年减碳潜力测算</div><div class="val">{carb_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按电力排放因子测算</div></div><div class="ov-item"><div class="lbl">测算口径</div><div class="val">2,860 h<em> /年</em></div><div class="note">等效利用小时 × 排放因子</div></div></div></div>', unsafe_allow_html=True)
     st.markdown('<div class="source-box"><b>数据来源</b> 项目布局、规模与减碳核算依据山东省政府、发展改革部门和能源主管部门公开资料整理；减碳结果为模型测算值。</div>', unsafe_allow_html=True)
 
 
@@ -894,7 +894,7 @@ def overview_summary():
     latest_cap = trend_cap[-1]
     ratio = latest_cap / trend_cap[0]
 
-    st.markdown('<div class="ov-panel"><div class="ov-tag overview-section-tag">01 · 时序发展 · 装机规模</div><div class="ov-title">2021—2025 装机规模变化趋势 · 累计并网</div>', unsafe_allow_html=True)
+    st.markdown('<div class="ov-panel"><div class="ov-tag overview-section-tag">时序发展 · 装机规模</div><div class="ov-title">2021—2025 装机规模变化趋势 · 累计并网</div>', unsafe_allow_html=True)
     fig = go.Figure()
     fig.add_scatter(x=trend_years, y=trend_cap, mode="lines+markers",
                     line=dict(color="#ff8a3d", width=4),
@@ -923,7 +923,7 @@ def overview_summary():
     largest = sites.loc[sites["capacity_mw"].idxmax()]
     status_counts = sites["status"].astype(str).value_counts()
     status_text = " · ".join(f"{n} {c}" for n, c in status_counts.items())
-    st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">02 · 空间分布 · 风场布局</div><div class="ov-title">山东沿海风电项目布局 · 总体结果</div><div class="ov-grid">'
+    st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">空间分布 · 风场布局</div><div class="ov-title">山东沿海风电项目布局 · 总体结果</div><div class="ov-grid">'
                 f'<div class="ov-item"><div class="lbl">纳入公开项目</div><div class="val">{total_projects} <em>个</em></div><div class="note">GIS 地图支持悬浮查看与分类筛选</div></div>'
                 f'<div class="ov-item"><div class="lbl">项目规划/建设容量</div><div class="val">{total_capacity:,.0f} <em>MW</em></div><div class="note">不等同于已并网装机容量</div></div>'
                 f'<div class="ov-item"><div class="lbl">最大单体项目</div><div class="val">{largest["capacity_mw"]:,.0f} <em>MW</em></div><div class="note">{largest["name"]}</div></div>'
@@ -932,7 +932,7 @@ def overview_summary():
     # ---- 03 减碳效益 · 绿色价值（最终结果）----
     total_generation_gwh = total_capacity * 2860 / 1000
     total_carbon_wan = total_capacity * 2860 * 0.5306 / 10000
-    st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">03 · 减碳效益 · 绿色价值</div><div class="ov-title">海上风电年化绿色能源价值 · 模型测算</div><div class="ov-grid">'
+    st.markdown(f'<div class="ov-panel"><div class="ov-tag overview-section-tag">减碳效益 · 绿色价值</div><div class="ov-title">海上风电年化绿色能源价值 · 模型测算</div><div class="ov-grid">'
                 f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{total_generation_gwh:,.0f} <em>GWh</em></div><div class="note">项目容量 × 2,860 h/年等效利用小时</div></div>'
                 f'<div class="ov-item"><div class="lbl">年二氧化碳减排测算</div><div class="val">{total_carbon_wan:,.1f} <em>万吨 CO₂</em></div><div class="note">按 0.5306 kgCO₂/kWh 排放因子</div></div>'
                 f'<div class="ov-item"><div class="lbl">度电减排强度</div><div class="val">0.53 <em>kgCO₂/kWh</em></div><div class="note">单位上网电量碳减排强度，按电力排放因子 0.5306 kgCO₂/kWh 测算</div></div>'
