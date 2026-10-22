@@ -107,7 +107,7 @@ st.markdown(
     h1,h2,h3,h4 { color:#eef4fa; }
     .mono { font:500 .68rem 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
     .eyebrow { color:var(--cyan); margin-bottom:.8rem; }
-    .topbar { position:relative; overflow:hidden; display:flex; justify-content:center; align-items:center; background:transparent; color:#ffffff; padding:.7rem 1rem; margin:-.3rem 0 1.4rem; min-height:70px; }
+    .topbar { position:relative; overflow:hidden; display:flex; justify-content:center; align-items:center; background:transparent; color:#ffffff; padding:.7rem 1rem; margin:-.5rem 0 .5rem; min-height:70px; }
     .topbrand { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:.7rem; padding-top:12px; }
     .brand-mark { width:48px; height:48px; display:grid; place-items:center; }
     .topbrand strong { display:block; font-size:2.8rem; letter-spacing:.02em; line-height:1.3; white-space:nowrap; font-family:'Noto Serif SC',serif; font-weight:700; text-align:center; background:none; -webkit-background-clip:initial; background-clip:initial; color:#ffffff; text-shadow:0 2px 8px rgba(8,48,92,.5), 0 0 22px rgba(255,255,255,.28); }
@@ -242,7 +242,7 @@ st.markdown(
 
 
     /* ===== 大标题 Logo：蓝色立体文字 + 风机/地球图标 + 金色星点 ===== */
-    .hero-scene { margin:2px 0 12px; border-radius:10px; overflow:hidden; box-shadow:0 3px 14px rgba(0,18,27,.4); }
+    .hero-scene { margin:2px 0 4px; border-radius:10px; overflow:hidden; box-shadow:0 3px 14px rgba(0,18,27,.4); }
     .hero-scene .spin-blades { animation:hs-spin 5.5s linear infinite; }
     @keyframes hs-spin { to { transform: rotate(360deg); } }
     .hero-scene .wave-a { animation:hs-wave 6s ease-in-out infinite; }
