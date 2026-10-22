@@ -181,7 +181,6 @@ st.markdown(
     [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel):not(:has(.ov-panel)){ background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); border-radius:6px; padding:.4rem 1rem 1rem; margin:.9rem 0 1.5rem; }
     .ov-panel .ov-tag, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag { display:flex; align-items:center; gap:.5rem; color:#a9c2d8; font-family:'Microsoft YaHei',sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.06em; }
     .ov-panel .ov-tag .ov-num, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-tag .ov-num { display:inline-flex; align-items:center; justify-content:center; min-width:1.6rem; height:1.6rem; padding:0 .3rem; background:rgba(82,211,197,.16); color:#52d3c5; border:1px solid rgba(82,211,197,.55); border-radius:.45rem; font-family:'DM Mono',monospace; font-weight:700; font-size:.78rem; letter-spacing:.02em; }
-    .overview-section-tag { font-size:1.4rem !important; line-height:1.2; }
     .ov-panel .ov-title, [data-testid="stVerticalBlockBorderWrapper"]:has(.time-panel) .ov-title { color:#ffffff; font-family:'Noto Serif SC',serif; font-size:1.3rem; font-weight:700; margin:.22rem 0 .55rem; }
     .ov-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
     .ov-item .lbl { color:#a9c2d8; font-size:.90rem; letter-spacing:.03em; }
