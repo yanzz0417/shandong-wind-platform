@@ -909,7 +909,7 @@ def overview_summary():
                 f'<div class="ov-item"><div class="lbl">纳入公开项目</div><div class="val">{total_projects} <em>个</em></div><div class="note">GIS 地图支持悬浮查看与分类筛选</div></div>'
                 f'<div class="ov-item"><div class="lbl">项目规划/建设容量</div><div class="val">{total_capacity:,.0f} <em>MW</em></div><div class="note">不等同于已并网装机容量</div></div>'
                 f'<div class="ov-item"><div class="lbl">最大单体项目</div><div class="val">{largest["capacity_mw"]:,.0f} <em>MW</em></div><div class="note">{largest["name"]}</div></div>'
-                f'</div><div style="color:#9fb6cd;font-size:.72rem;margin-top:.5rem;">状态结构：{status_text}；项目坐标为海域示意点，详细 GIS 地图见空间分布页。</div></div>', unsafe_allow_html=True)
+                f'</div><div style="color:#9fb6cd;font-size:.90rem;margin-top:.5rem;">状态结构：{status_text}；项目坐标为海域示意点，详细 GIS 地图见空间分布页。</div></div>', unsafe_allow_html=True)
 
     # ---- 03 减碳效益 · 绿色价值（最终结果）----
     total_generation_gwh = total_capacity * 3000 / 1000
