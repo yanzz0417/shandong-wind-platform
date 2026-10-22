@@ -181,7 +181,7 @@ st.markdown(
     .ov-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
     .ov-item .lbl { color:#a9c2d8; font-size:.90rem; letter-spacing:.03em; }
     .ov-item .val { color:#ffffff; font-size:1.62rem; font-weight:800; margin:.25rem 0 .15rem; }
-    .ov-item .val em { color:#c9d7e4; font-style:normal; }
+    .ov-item .val em { color:#52d3c5; font-style:normal; }
     .ov-item .note { color:#9fb6cd; font-size:.90rem; line-height:1.5; }
     .overview-time { background:rgba(6,22,44,.58); border:1px solid rgba(196,168,92,.38); padding:1.15rem 1.25rem 1.25rem; margin:1rem 0 1.4rem; }
     .overview-time-head { display:flex; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:.6rem; }
@@ -797,7 +797,7 @@ def overview_page_legacy():
     n_run = int((sites["status"] == "运行").sum()); n_demo = int((sites["status"] == "示范").sum()); n_build = int((sites["status"] == "建设").sum())
 
     st.markdown(
-        f'<div class="ov-panel"><div class="ov-tag">01 · 时序发展 · 装机规模</div>'
+        f'<div class="ov-panel"><div class="ov-tag" style="color:#52d3c5">01 · 时序发展 · 装机规模</div>'
         f'<div class="ov-title">装机时序总体结果</div>'
         f'<div class="ov-grid">'
         f'<div class="ov-item"><div class="lbl">已收录装机（{last_year} 年）</div><div class="val">{last_cap:,.0f} <em>MW</em></div><div class="note">官方最新已收录年份</div></div>'
@@ -806,7 +806,7 @@ def overview_page_legacy():
         f'</div></div>', unsafe_allow_html=True)
 
     st.markdown(
-        f'<div class="ov-panel"><div class="ov-tag">02 · 空间分布 · 风场布局</div>'
+        f'<div class="ov-panel"><div class="ov-tag" style="color:#f0b56a">02 · 空间分布 · 风场布局</div>'
         f'<div class="ov-title">空间布局总体结果</div>'
         f'<div class="ov-grid">'
         f'<div class="ov-item"><div class="lbl">收录风电场</div><div class="val">{len(sites)} <em>个</em></div><div class="note">有名称与规模依据的项目子集</div></div>'
@@ -815,7 +815,7 @@ def overview_page_legacy():
         f'</div></div>', unsafe_allow_html=True)
 
     st.markdown(
-        f'<div class="ov-panel"><div class="ov-tag">03 · 减碳效益 · 绿色价值</div>'
+        f'<div class="ov-panel"><div class="ov-tag" style="color:#7fd18f">03 · 减碳效益 · 绿色价值</div>'
         f'<div class="ov-title">减碳效益总体结果</div>'
         f'<div class="ov-grid">'
         f'<div class="ov-item"><div class="lbl">年发电量测算</div><div class="val">{gen_gwh:,.0f} <em>GWh</em></div><div class="note">合计装机 × 3,000 h/年等效利用小时</div></div>'
