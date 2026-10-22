@@ -244,6 +244,7 @@ st.markdown(
     .t2-panel-desc { color:#bed3e2; font-size:13px; line-height:1.7; margin:0 0 3px; }
     .t2-scope { color:#d2e4ef; font-size:12px; line-height:1.8; margin-top:6px; }
     .t2-scope strong { color:#a5efde; font-weight:500; }
+    .st-key-spatial_status_filter [data-testid="stWidgetLabel"] { font-size:.90rem !important; }
     @media (max-width:640px) { .t2-overview { grid-template-columns:1fr; padding:13px; gap:10px; } .t2-metric { border-right:0; border-bottom:1px solid rgba(176,218,241,.22); padding:0 0 10px; } .st-key-panel_controls2 [data-testid="stHorizontalBlock"] { flex-direction:column; gap:5px; } .st-key-panel_controls2 [data-testid="stColumn"] { width:100%!important; flex:1 1 100%!important; min-width:0; } .t2-year-caption { display:none; } }
 
 
@@ -544,7 +545,7 @@ def spatial():
     default_show = [s for s in status_opts if s in ("已并网", "在建·重大实施", "拟建")]
     if not default_show:
         default_show = list(status_opts)
-    picked = st.multiselect("按建设状态筛选", status_opts, default=default_show)
+    picked = st.multiselect("按建设状态筛选", status_opts, default=default_show, key="spatial_status_filter")
     if not picked:
         picked = list(status_opts)
     filtered = sites[sites["status"].isin(picked)].copy()
