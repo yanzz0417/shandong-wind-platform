@@ -673,7 +673,7 @@ def render_carbon_status(frame, hours, factor, label, note, color):
     m2.metric(f"{label} · 合计装机", f"{cap:,.1f} MW")
     m3.metric(f"{label} · 年减碳测算", f"{carb_t / 10000:,.2f} 万吨 CO₂")
     st.caption(f"{label}：{note}；年发电量测算合计约 {gen_mwh / 100000:,.2f} 亿 kWh。")
-    res2 = res.sort_values("annual_generation_mwh", ascending=True)
+    res2 = res.sort_values("annual_generation_mwh", ascending=False)
     res2["disp_name"] = res2["name"].map(lambda n: (str(n)[:11] + "…") if len(str(n)) > 11 else str(n))
     gen_vals = (res2["annual_generation_mwh"] / 100000).tolist()
     red_vals = (res2["carbon_t"] / 10000).tolist()
