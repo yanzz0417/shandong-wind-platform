@@ -98,6 +98,7 @@ st.markdown(
     [data-testid="stSidebar"] .stRadio label { min-height:44px; box-sizing:border-box; padding:.66rem .78rem; border:1px solid transparent; border-left:3px solid transparent; border-radius:4px; background:rgba(3,16,38,.22); }
     [data-testid="stSidebar"] .stRadio label:hover { background:transparent; border-color:transparent; border-left-color:transparent; }
     [data-testid="stSidebar"] .stRadio label p { color:#e4eef6 !important; font-size:1.04rem; font-weight:600; }
+    [data-testid="stCaptionContainer"] p { font-size:.90rem !important; }
     [data-testid="stSidebar"] .stRadio label:has(input:checked) { background:rgba(201,162,39,.20); border-color:rgba(217,176,97,.35); border-left-color:#e3c079; }
     [data-testid="stSidebar"] .stRadio label:has(input:checked) p { color:#ffffff !important; font-weight:800; }
     [data-testid="stSidebar"] [data-testid="stExpander"] { background:rgba(4,20,42,.58); border:1px solid rgba(196,168,92,.28); }
@@ -468,21 +469,24 @@ def temporal():
     new_mw = row["new_grid_capacity_mw"] if pd.notna(row["new_grid_capacity_mw"]) else None
     if year == 2021:
         date_note = "2021 年 12 月全容量并网"
-    elif year in (2022, 2023):
-        date_note = f"累计并网至 {year} 年底"
+    elif year == 2022:
+        date_note = "累计并网至 2022 年底"
+    elif year == 2023:
+        date_note = "累计建成至 2023 年底"
     else:
         date_note = f"统计截至 {year} 年 11 月底"
+    kw = "累计建成" if year == 2023 else "累计并网"
     if new_mw is not None:
-        interpretation = (f"{year} 年全省累计并网规模 {cum_wan:g} 万千瓦，{date_note}，为官方公开口径；"
+        interpretation = (f"{year} 年全省{kw}规模 {cum_wan:g} 万千瓦，{date_note}，为官方公开口径；"
                           f"全年新增并网约 {new_mw:,.0f} MW（{new_mw / 10:g} 万千瓦）。")
     else:
-        interpretation = f"{year} 年全省累计并网规模 {cum_wan:g} 万千瓦，{date_note}，为官方公开口径。"
+        interpretation = f"{year} 年全省{kw}规模 {cum_wan:g} 万千瓦，{date_note}，为官方公开口径。"
     st.markdown(
         '<div class="t2-overview">'
         '<div class="t2-metric">'
-        f'<div class="t2-metric-label">{year} 年累计并网规模</div>'
+        f'<div class="t2-metric-label">{year} 年{kw}规模</div>'
         f'<div class="t2-metric-value">{cum_wan:g}<small>万千瓦</small></div>'
-        f'<div class="t2-metric-date">{date_note} · <strong>累计并网口径</strong></div></div>'
+        f'<div class="t2-metric-date">{date_note} · <strong>{kw}口径</strong></div></div>'
         '<div class="t2-reading">'
         f'<div class="t2-reading-label">{year} 年 · 数据解读</div>'
         f'<p>{interpretation}</p>'
@@ -674,7 +678,7 @@ def render_carbon_status(frame, hours, factor, label, note, color):
     m3.metric(f"{label} · 年减碳测算", f"{carb_t / 10000:,.2f} 万吨 CO₂")
     st.caption(f"{label}：{note}；年发电量测算合计约 {gen_mwh / 100000:,.2f} 亿 kWh。")
     res2 = res.sort_values("annual_generation_mwh", ascending=False)
-    res2["disp_name"] = res2["name"].map(lambda n: (str(n)[:11] + "…") if len(str(n)) > 11 else str(n))
+    res2["disp_name"] = res2["name"].map(lambda n: (str(n)[:16] + "…") if len(str(n)) > 16 else str(n))
     gen_vals = (res2["annual_generation_mwh"] / 100000).tolist()
     red_vals = (res2["carbon_t"] / 10000).tolist()
     # 年发电量测算（横向柱状图）
@@ -682,10 +686,10 @@ def render_carbon_status(frame, hours, factor, label, note, color):
         x=res2["annual_generation_mwh"] / 100000, y=res2["disp_name"], orientation="h",
         marker=dict(color=color, cornerradius=3),
         text=[f"{v:,.2f}" for v in gen_vals], textposition="outside",
-        textfont=dict(size=10, color="#ffffff"), cliponaxis=False,
+        textfont=dict(size=14.4, color="#ffffff"), cliponaxis=False,
         hovertemplate="%{customdata[1]}<br>装机 %{customdata[0]:,.0f} MW<br>年发电量测算 %{x:,.2f} 亿 kWh<extra></extra>",
         customdata=res2[["capacity_mw", "name"]]))
-    figg.update_layout(title=dict(text=f"{label} · 各项目年发电量测算（亿 kWh/年）", font=dict(color="#ffffff", size=13, family="Microsoft YaHei, sans-serif")), height=max(280, len(res2) * 30 + 50),
+    figg.update_layout(title=dict(text=f"{label} · 各项目年发电量测算（亿 kWh/年）", font=dict(color="#ffffff", size=14.4, family="Microsoft YaHei, sans-serif")), height=max(280, len(res2) * 30 + 50),
         margin=dict(l=100, r=72, t=40, b=28),
         paper_bgcolor="rgba(8,28,46,0.5)", plot_bgcolor="rgba(6,20,34,0.4)",
         font=dict(family="Microsoft YaHei, sans-serif", size=12, color="#ffffff"),
@@ -696,10 +700,10 @@ def render_carbon_status(frame, hours, factor, label, note, color):
         x=res2["carbon_t"] / 10000, y=res2["disp_name"], orientation="h",
         marker=dict(color=color, cornerradius=3),
         text=[f"{v:,.1f}" for v in red_vals], textposition="outside",
-        textfont=dict(size=12, color="#ffffff"), cliponaxis=False,
+        textfont=dict(size=14.4, color="#ffffff"), cliponaxis=False,
         hovertemplate="%{customdata[1]}<br>装机 %{customdata[0]:,.0f} MW<br>年减碳测算 %{x:,.1f} 万吨 CO₂<extra></extra>",
         customdata=res2[["capacity_mw", "name"]]))
-    figr.update_layout(title=dict(text=f"{label} · 各项目年减碳测算（万吨 CO₂/年）", font=dict(color="#ffffff", size=13, family="Microsoft YaHei, sans-serif")), height=max(280, len(res2) * 30 + 50),
+    figr.update_layout(title=dict(text=f"{label} · 各项目年减碳测算（万吨 CO₂/年）", font=dict(color="#ffffff", size=14.4, family="Microsoft YaHei, sans-serif")), height=max(280, len(res2) * 30 + 50),
         margin=dict(l=100, r=72, t=40, b=28),
         paper_bgcolor="rgba(8,28,46,0.5)", plot_bgcolor="rgba(6,20,34,0.4)",
         font=dict(family="Microsoft YaHei, sans-serif", size=12, color="#ffffff"),
